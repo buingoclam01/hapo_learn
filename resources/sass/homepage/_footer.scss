@@ -9,6 +9,7 @@
 
 footer {
   background-color: gray;
+  margin-top: 100px;
 }
 
 .footer-content {
@@ -32,14 +33,10 @@ footer {
   display: flex;
 }
 
-.icon-item {
+.icon-item a {
   font-size: 30px;
-  a {
-    margin: 20px;
-    i {
-      color: white;
-    }
-  }
+  margin: 20px;
+  color: white;
 }
 
 .list-address a {

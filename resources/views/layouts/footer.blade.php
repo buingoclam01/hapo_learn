@@ -114,8 +114,6 @@
                     </p>
                      
                 </div>
-               
-
             </div>
 
             <p class="slogan-company">

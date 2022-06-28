@@ -5,7 +5,6 @@
  */
 
 require('./bootstrap');
-require('./slick');
 window.Vue = require('vue').default;
 
 /**
