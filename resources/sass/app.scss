@@ -1,6 +1,8 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
@@ -11,8 +13,6 @@
 @import 'homepage/header';
 @import 'homepage/footer';
 @import 'homepage/home';
+@import 'homepage/stalic';
 @import 'homepage/whylearn';
-
-
-
-
+@import 'homepage/feedback';

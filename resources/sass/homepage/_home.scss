@@ -1,10 +1,12 @@
 .banner {
   min-height: 750px;
   margin-top: 110px;
+
   img {
     width: 100%;
     max-height: 700px;
   }
+
   .banner-container {
     position: relative;
     height: 655px;
@@ -25,6 +27,7 @@
       margin: 0;
       line-height: 55px;
     }
+
     .banner-title-content-b {
       font-weight: 900;
       img {
@@ -57,6 +60,7 @@
       box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
+
   .banner-bottom {
     background-image: linear-gradient(white, #e5e5e5 98%);
     width: 100%;
@@ -66,6 +70,7 @@
 
 @media (max-width: 990px) and (min-width: 500px) {
   .banner {
+
     .banner-container {
       width: 100vw;
       height: 350px;
@@ -85,6 +90,7 @@
         width: 39px;
         height: 37px;
       }
+
       .banner-conlit {
         top: 43%;
         left: 27px;
@@ -99,6 +105,7 @@
         padding: 8px 29px;
       }
     }
+
     .overlay {
       width: 100vw;
       height: 100vh;
@@ -120,27 +127,34 @@
 @media (max-width: 500px) {
   .banner {
     width: 100%;
+
     .banner-container {
       height: 500px;
+
       .banner img {
         width: 100%;
       }
+
       .banner-title {
         top: 40%;
         left: 51%;
         transform: translateX(-50%);
       }
+
       .banner-title-content {
         font-size: 18px;
         font-weight: 400;
         color: gray;
         margin: 0;
         line-height: 25px;
+
       }
+
       .banner-title-content-b{
         font-weight: 700;
        
       }
+
       .banner-conlit {
         top: 51%;
         left:48%;
@@ -163,6 +177,7 @@
       }
     }
   }
+
   .banner-bottom {
     margin-top: -221px;
   }
@@ -172,10 +187,12 @@
   margin-top: 45px;
   background-color: white;
   font-weight: 400;
+  
   .big-tittle {
     font-size: 60px;
     text-align: center;
   }
+
   .line-border {
     margin-top: 15px;
     width: 380px;
@@ -192,15 +209,18 @@
     width: 68%;
     margin: 0 auto;
     transform: translateY(-25%);
-  }
+  } 
+
   .no-tranfer {
     transform: translateY(0) !important;
   }
+
   .items {
     width: 370px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
+
     .img-items {
       width: 100%;
       height: 215px;
@@ -222,12 +242,14 @@
         color: yellowgreen;
         margin-top: 25px;
       }
+
       .content-text {
         width: 85%;
         margin: 0 auto;
         font-size: 15px;
         font-weight: 900;
       }
+
       .btn-link {
         margin-top: 26px;
         margin-bottom: 50px;
@@ -240,22 +262,28 @@
         }
       }
     }
+
     .img-items1 {
       background-color: dodgerblue;
     }
+
     .img-items2 {
       background-color: hotpink;
     }
+
     .img-items3 {
       background-color: deepskyblue;
     }
+
     .img-items4 {
       background-color: #1b75bb;
     }
   }
+
   .space {
     margin-top: 45px;
   }
+
   .view-more-title {
     margin-top: 60px;
     text-align: center;
@@ -267,14 +295,17 @@
     }
   }
 }
+
 @media (max-width: 900px) and (min-width: 500px) {
   .main-content {
     border-radius: 10px 10px 10px 11px;
     margin-top: -70px;
+
     .list-items {
       display: block;
       transform: translateY(-40%);
     }
+
     .items {
       width: 100%;
       display: flex;
@@ -298,6 +329,7 @@
           color: gray;
           font-weight: 500;
         }
+
         .title {
           font-size: 20px;
           margin-left: 20px;
@@ -315,10 +347,12 @@
           }
         }
       }
+
       .img-items {
         height: 100% ;
       }
     }
+
     .big-tittle {
       margin-bottom: -2px;
       margin-top: -240px;
@@ -326,6 +360,7 @@
       font-weight: 900;
       color: #11114E;
     }
+
     .line-border {
       width: 275px;
       margin-bottom: 50px;
@@ -335,26 +370,37 @@
 
 @media (max-width: 480px) {
   .main-content {
+    background-color: white;
+  }
+  
+  .main-content {
     border-radius: 10px 10px 10px 11px ;
     margin-top: -50px;
+
     .list-items {
       display: block;
     }
+
     .view-more-title a {
       font-size: 22px ;
     }
+
     .items {
       width: 100%;
+
       .content-items {
         width: 100%;
+
         .btn-link {
           transform: translateY(-20px);
         }
       }
+
       .img-items {
         height: 100%;
       }
     }
+
     .big-tittle {
       margin-bottom: -2px;
       margin-top: -240px;
@@ -371,8 +417,4 @@
       font-size: 40px;
     }
   }
-}
-
-.main-content {
-  background-color: white;
 }

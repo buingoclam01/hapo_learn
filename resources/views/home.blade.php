@@ -141,5 +141,214 @@
         <div class="banner-connect-img"> <img src="{{ asset('images/laptop.png')}}" alt="">  </div>
 </div>
 
-
+<div class="feed-back">
+    <p class="big-tittle">
+       Feedback
+    </p>
+    <div class="line-border"></div>
+    <p class="feed-back-slogan">
+       What other students turned professionals have to say about us after learning with us and reaching their goals
+    </p>
+    <div class="list-feedback">
+       <div class="item-feed">
+          <div class="content-feed">
+             <div class="line-d"></div>
+             “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+          </div>
+          <div class="user-feed">
+             <div class="face">
+                <img src="{{ asset('images/face.png')}}" alt="">
+             </div>
+             <div class="info">
+                <div class="name">
+                   Hoàng Nguyễn Nguyên
+                </div>
+                <div class="text">
+                   PHP
+                </div>
+                <div class="star">
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="item-feed">
+          <div class="content-feed">
+             <div class="line-d"></div>
+             “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+          </div>
+          <div class="user-feed">
+             <div class="face">
+                <img src="{{ asset('images/face.png')}}" alt="">
+             </div>
+             <div class="info">
+                <div class="name">
+                   Hoàng Nguyễn Nguyên
+                </div>
+                <div class="text">
+                   PHP
+                </div>
+                <div class="star">
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="item-feed">
+          <div class="content-feed">
+             <div class="line-d"></div>
+             “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+          </div>
+          <div class="user-feed">
+             <div class="face">
+                <img src="{{ asset('images/face.png')}}" alt="">
+             </div>
+             <div class="info">
+                <div class="name">
+                   Hoàng Nguyễn Nguyên
+                </div>
+                <div class="text">
+                   PHP
+                </div>
+                <div class="star">
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="item-feed">
+          <div class="content-feed">
+             <div class="line-d"></div>
+             “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+          </div>
+          <div class="user-feed">
+             <div class="face">
+                <img src="{{ asset('images/face.png')}}" alt="">
+             </div>
+             <div class="info">
+                <div class="name">
+                   Hoàng Nguyễn Nguyên
+                </div>
+                <div class="text">
+                   PHP
+                </div>
+                <div class="star">
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="item-feed">
+          <div class="content-feed">
+             <div class="line-d"></div>
+             “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+          </div>
+          <div class="user-feed">
+             <div class="face">
+                <img src="{{ asset('images/face.png')}}" alt="">
+             </div>
+             <div class="info">
+                <div class="name">
+                   Hoàng Nguyễn Nguyên
+                </div>
+                <div class="text">
+                   PHP
+                </div>
+                <div class="star">
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="item-feed">
+          <div class="content-feed">
+             <div class="line-d"></div>
+             “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+          </div>
+          <div class="user-feed">
+             <div class="face">
+                <img src="{{ asset('images/face.png')}}" alt="">
+             </div>
+             <div class="info">
+                <div class="name">
+                   Hoàng Nguyễn Nguyên
+                </div>
+                <div class="text">
+                   PHP
+                </div>
+                <div class="star">
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                </div>
+             </div>
+          </div>
+       </div> 
+       </div>
+    </div>
+ </div>
+<div class="banner-startlearn" style="background-image: url('{{ asset('images/banner3.png')}}');">
+    <div class="banner-startlearn-content">
+       <p class="banner-startlearn-title">
+          Become a member of our growing community!
+       </p>
+       <p class="banner-startlearn-link">
+          <a href="">Start Learning Now!</a>
+       </p>
+    </div>
+ </div>
+ <div class="stactistic">
+    <p class="big-tittle">
+       Stactistic
+    </p>
+    <div class="line-border"></div>
+    <div class="list-statistic">
+       <div class="list-item">
+          <div class="list-items-title">
+             Courses
+          </div>
+          <div class="list-item-number">
+             1,5894
+          </div>
+       </div>
+       <div class="list-item">
+          <div class="list-items-title">
+          Lessons
+          </div>
+          <div class="list-item-number">
+          2,689
+          </div>
+       </div>
+       <div class="list-item">
+          <div class="list-items-title">
+          Learners
+          </div>
+          <div class="list-item-number">
+          16,882
+          </div>
+       </div>
+    </div>
+ </div>
 @endsection
