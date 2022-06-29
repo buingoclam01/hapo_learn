@@ -161,7 +161,7 @@
              </div>
              <div class="info">
                 <div class="name">
-                   Hoàng Nguyễn Nguyên
+                Hoang Anh Nguyen
                 </div>
                 <div class="text">
                    PHP

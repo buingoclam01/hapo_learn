@@ -51,13 +51,7 @@
                         </div>
                         <div class="list-address">
                             <p>
-                                <a href=""> facebook.com </a>
-                            </p>
-                            <p>
-                                <a href=""> info@haposoft.com </a>
-                            </p>
-                            <p>
-                                <a href=""> +84-85-645-9898 </a>
+                                <a href=""> facebook.com/tuyen.dung.haposoft </a>
                             </p>
                         </div>
                     </div>
