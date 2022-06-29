@@ -147,7 +147,6 @@
         color: gray;
         margin: 0;
         line-height: 25px;
-
       }
 
       .banner-title-content-b{
@@ -228,11 +227,13 @@
       justify-content: center;
       align-items: center;
       border-radius: 15px 15px 0 0;
+
       img {
         width: 226px;
         height: 125px;
       }
     }
+
     .content-items {
       text-align: center;
       .title {
@@ -253,6 +254,7 @@
       .btn-link {
         margin-top: 26px;
         margin-bottom: 50px;
+
         a {
           padding: 9px 37px;
           background-color: yellowgreen;
@@ -288,6 +290,7 @@
     margin-top: 60px;
     text-align: center;
     margin-bottom: 80px;
+    
     a {
       color: yellowgreen;
       font-size: 40px;
