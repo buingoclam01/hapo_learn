@@ -33,6 +33,24 @@
     width: 80%;
     margin: 0 auto;
     margin-top: 100px;
+    .slick-prev{
+    position: absolute;
+    top: 52px;
+    left: -15px;
+    }
+    .slick-next{
+      position: absolute;
+      top: 47px;
+      right: 20px;
+      }
+    .slick-prev:before, 
+    .slick-next:before {
+      font-family: "slick";
+      color: rgb(207, 207, 201);
+      opacity: 0.75;
+      font-size: 30px;
+      margin-top: 50px;
+  }
   }
 
   .checked {
@@ -40,22 +58,14 @@
   }
 
   .content-feed {
+    position: relative;
     width: 90%;
     border: 0.5px solid white;
     border-radius: 10px;
     box-shadow: inset 0px 0px 4px rgb(0 0 0 / 25%);
     padding: 12px 13px;
-    margin: 12px 10px;
+    margin: 12px 27px;
 
-    .line-d {
-      width: 5px;
-      height: 108px;
-      background-color: white;
-      position: absolute;
-      margin-top: -20px;
-      margin-left: -20px;
-      border-radius: 10px;
-    }
   }
 
   .user-feed {
@@ -85,9 +95,14 @@
       }
     }
   }
+ 
 }
 @media (max-width: 800px) {
   .feed-back {
+    
+    .content-feed {
+      margin: 12px 36px;
+    }
 
     .feed-back-slogan {
     margin-bottom: 51px;
@@ -99,11 +114,24 @@
     .list-feedback {
       margin-top: 10px;
       margin-bottom: 30px;
+
+      .slick-prev{
+      top: 59px;
+      left: -10px;
+      }
+      .slick-next{
+      top: 60px;
+      right: -5px;
+      }
     }
   }
 }
-@media (max-width: 376px) {
+@media (max-width: 500px) {
   .feed-back {
+
+    .content-feed {
+      margin: 4px 22px;
+    }
 
     .feed-back-slogan {
       font-size: 16px;
@@ -114,6 +142,19 @@
       margin: 0 auto;
       margin-top: 20px;
       margin-bottom: 20px;
+      
+        .slick-prev
+        {
+        left: -10px;
+        top: 75px;
+      }
+     
+      .slick-next
+        {
+        top: 75px;
+        right: -6px;
+      }
+       }
 
       .owl-dots {
         display: none;
@@ -139,7 +180,6 @@
       font-size: 28px;
     }
   }
-}
 
 .banner-startlearn {
   margin-top: 70px;
@@ -180,8 +220,8 @@
 @media (max-width: 500px) {
   .banner-startlearn {
     height: 182px;
+    
     .banner-startlearn-content {
-
       .banner-startlearn-title {
         font-size: 23px;
       }
