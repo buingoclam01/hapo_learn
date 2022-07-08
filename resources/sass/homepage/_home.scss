@@ -1,4 +1,4 @@
-.banner {
+﻿.banner {
   min-height: 750px;
   margin-top: 110px;
 
@@ -23,7 +23,7 @@
     .banner-title-content {
       font-size: 50px;
       font-weight: 400;
-      color: gray;
+      color: $indigo;
       margin: 0;
       line-height: 55px;
     }
@@ -151,7 +151,7 @@
 
       .banner-title-content-b{
         font-weight: 700;
-       
+
       }
 
       .banner-conlit {
@@ -186,7 +186,7 @@
   margin-top: 45px;
   background-color: white;
   font-weight: 400;
-  
+
   .big-tittle {
     font-size: 60px;
     text-align: center;
@@ -208,7 +208,7 @@
     width: 68%;
     margin: 0 auto;
     transform: translateY(-25%);
-  } 
+  }
 
   .no-tranfer {
     transform: translateY(0) !important;
@@ -249,7 +249,7 @@
         margin: 0px auto;
         font-size: 15px;
         font-weight: 400;
-        color: #505353;
+        color: $xam;
       }
 
       .btn-link {
@@ -324,7 +324,7 @@
 
         .content-text {
           width: 88%;
-          margin-left: 5px 10px 0 14px;
+          margin-left: 5px 10px 2px 14px;
           font-size: 14px;
           overflow: hidden;
           -webkit-line-clamp: 3;
@@ -343,7 +343,7 @@
         .btn-link {
           text-align: right;
           margin-right: 10px;
-          margin-top: 15px;
+          margin-top: 40px;
           a {
             font-size: 14px;
             padding: 7px 14px;
@@ -376,7 +376,7 @@
   .main-content {
     background-color: white;
   }
-  
+
   .main-content {
     border-radius: 10px 10px 10px 11px ;
     margin-top: -50px;
@@ -391,7 +391,7 @@
 
     .items {
       width: 100%;
-      
+
 
       .content-items {
         width: 100%;

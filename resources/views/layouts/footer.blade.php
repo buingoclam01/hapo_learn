@@ -28,30 +28,30 @@
                             <a href="#" class="text-reset">Login/Register</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Profile</a>
+                            <a href="#" class="text-reset">Profile</a>
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 ">
                         <div class="list-icon">
                             <p class="icon-item">
-                                <a href="">
+                                <a href="#">
                                     <i class="fa-brands fa-facebook"></i>
                                 </a>
                             </p>
                             <p class="icon-item">
-                                <a href="">
+                                <a href="#">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
                             </p>
                             <p class="icon-item">
-                                <a href="">
+                                <a href="#">
                                     <i class="fa-solid fa-phone"></i>
                                 </a>
                             </p>
                         </div>
                         <div class="list-address">
                             <p>
-                                <a href=""> facebook.com/tuyen.dung.haposoft </a>
+                                <a href="#"> facebook.com/tuyen.dung.haposoft </a>
                             </p>
                         </div>
                     </div>
@@ -85,37 +85,33 @@
                 </p>
             </div>
             </div>
-            
+
             <div class="footer-foter">
                 <div class="w-50">
                     <img src="{{ asset('images/hapo_white.png') }}" alt="HapoLearn Logo">
                 </div>
                 <div class="list-icon">
                     <p class="icon-item">
-                        <a href="">
+                        <a href="#">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
                     </p>
                     <p class="icon-item">
-                        <a href="">
+                        <a href="#">
                             <i class="fa-solid fa-envelope"></i>
                         </a>
                     </p>
                     <p class="icon-item">
-                        <a href="">
+                        <a href="#">
                             <i class="fa-solid fa-phone"></i>
                         </a>
-                    </p>
-                     
+                    </p>   
                 </div>
             </div>
-
             <p class="slogan-company">
               Interactive lessons, "on-the-go" practice, peer support.</p> 
             </div>
-           
-            </div>
-            
+            </div> 
         </div>
     </div>
     <div class="clear"></div>
