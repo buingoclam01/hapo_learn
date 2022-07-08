@@ -8,7 +8,8 @@
 }
 
 footer {
-  background-color: gray;
+  background: #505353;
+  margin-top: 100px;
 }
 
 .footer-content {
@@ -32,19 +33,17 @@ footer {
   display: flex;
 }
 
-.icon-item {
+.icon-item a {
   font-size: 30px;
-  a {
-    margin: 20px;
-    i {
-      color: white;
-    }
-  }
+  margin: 20px;
+  color: white;
 }
 
 .list-address a {
   text-align: left;
   color: white;
+  margin-left: -300px;
+;
   &:hover {
     text-decoration: underline;
     cursor: pointer;
