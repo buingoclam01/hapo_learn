@@ -20,7 +20,6 @@ class CreateTeacherCoursesTable extends Migration
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

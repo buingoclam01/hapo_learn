@@ -18,17 +18,13 @@ class CreateUserCoursesTable extends Migration
             $table->integer('course_id')->nullable();
             $table->string('register_lesson_time')->nullable();
             $table->timestamps();
-
         });
-
     }
-
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-
     public function down()
     {
         Schema::dropIfExists('user_courses');
