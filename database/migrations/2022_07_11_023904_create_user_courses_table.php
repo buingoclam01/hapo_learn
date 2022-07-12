@@ -20,6 +20,7 @@ class CreateUserCoursesTable extends Migration
             $table->timestamps();
 
         });
+
     }
 
     /**
@@ -27,6 +28,7 @@ class CreateUserCoursesTable extends Migration
      *
      * @return void
      */
+
     public function down()
     {
         Schema::dropIfExists('user_courses');
