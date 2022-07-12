@@ -26,16 +26,19 @@ class Course extends Model
     {
         return $this->hasMany(Review::class);
     }
+
     public function users()
     {
         return $this->belongsToMany(User::class);
     }
+
     public function teachers()
     {
         return $this->belongsToMany(User::class, 'teacher_course', 'course_id');
     }
-    public function tags() {
+
+    public function tags()
+    {
          return $this ->hasMany(Tag::class,'course_id');
     }
-
 }

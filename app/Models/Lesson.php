@@ -21,12 +21,14 @@ class Lesson extends Model
         return $this->belongsToMany(Course::class);
     }
 
-    public function programs(){
-        return $this->hasMany(Program::class);
+    public function programs()
+    {
 
+        return $this->hasMany(Program::class);
     }
 
-    public function users(){
+    public function users()
+    {
         return $this->belongsToMany(User::class, 'user_lesson');
     }
 }

@@ -18,7 +18,8 @@ class Program extends Model
 
 
 
-    public function Lesson(){
+    public function Lessons()
+    {
         return $this->belongsToMany(Lesson::class);
     }
 

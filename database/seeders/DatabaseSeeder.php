@@ -1,8 +1,10 @@
 <?php
 namespace Database\Seeders;
+
 use Database\Seeders\UsersTableSeeder;
 use Database\Seeders\CoursesTableSeeder;
 use Illuminate\Database\Seeder;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -16,10 +18,3 @@ class DatabaseSeeder extends Seeder
         $this->call(CoursesTableSeeder::class);
     }
 }
-
-
-
-
-
-
-

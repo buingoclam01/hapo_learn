@@ -18,11 +18,13 @@ class Review extends Model
         'parent_id',
     ];
 
-    public function courses(){
+    public function courses()
+    {
         return $this->belongsToMany(Course::class);
     }
 
-    public function users(){
+    public function users()
+    {
         return $this->belongsToMany(User::class);
     }
 }
