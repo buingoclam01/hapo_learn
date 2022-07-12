@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\softDeletes;
 class Review extends Model
 {
     use HasFactory, softDeletes;
+
     protected $fillable = [
         'time',
         'message',

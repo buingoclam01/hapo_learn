@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\softDeletes;
 class Lesson extends Model
 {
     use HasFactory, softDeletes;
+
     protected $fillable = [
         'title',
         'time',
@@ -23,7 +24,6 @@ class Lesson extends Model
 
     public function programs()
     {
-
         return $this->hasMany(Program::class);
     }
 

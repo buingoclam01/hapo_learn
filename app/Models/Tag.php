@@ -9,13 +9,14 @@ use Illuminate\Database\Eloquent\softDeletes;
 class Tag extends Model
 {
     use HasFactory, softDeletes;
+
     protected $fillable = [
         'name',
         'course_id',
     ];
-    protected function Course()
+
+    public function course()
     {
         return $this->belongsToMany(Course::class);
     }
-
 }

@@ -14,11 +14,11 @@ class CreateTagsTable extends Migration
     public function up()
     {
         Schema::create('tags', function (Blueprint $table) {
-        $table->id();
-        $table->string('name')->nullable();
-        $table->integer('course_id')->nullable();
-        $table->timestamps();
-        $table->softDeletes();
+            $table->id();
+            $table->string('name')->nullable();
+            $table->integer('course_id')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

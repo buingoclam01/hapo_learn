@@ -39,6 +39,6 @@ class Course extends Model
 
     public function tags()
     {
-         return $this ->hasMany(Tag::class,'course_id');
+         return $this ->hasMany(Tag::class, 'course_id');
     }
 }
