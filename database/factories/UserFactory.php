@@ -36,6 +36,7 @@ class UserFactory extends Factory
         ];
     }
     /**
+     * course_id => $thí ->faker ->randomEloquent()
      * Indicate that the model's email address should be unverified.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory

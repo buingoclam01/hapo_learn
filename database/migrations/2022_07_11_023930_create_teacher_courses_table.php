@@ -17,6 +17,7 @@ class CreateTeacherCoursesTable extends Migration
             $table->integer('user_id')->nullable();
             $table->integer('course_id')->nullable();
             $table->string('teacher_course_time')->nullable();
+            $table->timestamps();
         });
     }
 

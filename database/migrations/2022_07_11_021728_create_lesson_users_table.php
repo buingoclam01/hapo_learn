@@ -16,7 +16,7 @@ class CreateLessonUsersTable extends Migration
         Schema::create('lesson_users', function (Blueprint $table) {
             $table->integer('user_id')->nullable();
             $table->integer('lesson_id')->nullable();
-            $table->string('register_lesson_time')->nullable();
+            $table->date('register_lesson_time')->nullable();
         });
     }
 

@@ -1,10 +1,11 @@
 <?php
+
 namespace Database\Seeders;
 
+use App\Models\UserCourse;
 use Illuminate\Database\Seeder;
-use App\Models\Course;
 
-class CoursesTableSeeder extends Seeder
+class UserCourseTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +14,7 @@ class CoursesTableSeeder extends Seeder
      */
     public function run()
     {
-        Course::factory() ->count(40) ->create();
+        UserCourse::factory()->count(30) ->create();
+
     }
 }

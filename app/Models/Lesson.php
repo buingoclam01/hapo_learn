@@ -17,9 +17,9 @@ class Lesson extends Model
         'cours_id',
     ];
 
-    public function courses()
+    public function course()
     {
-        return $this->belongsToMany(Course::class);
+        return $this->belongsTo(Course::class);
     }
 
     public function programs()

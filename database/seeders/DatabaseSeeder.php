@@ -1,9 +1,11 @@
 <?php
 namespace Database\Seeders;
 
+use Illuminate\Database\Seeder;
 use Database\Seeders\UsersTableSeeder;
 use Database\Seeders\CoursesTableSeeder;
-use Illuminate\Database\Seeder;
+use Database\Seeders\TeacherCourseTableSeeder;
+use Database\Seeders\UserCourseTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,5 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(UsersTableSeeder::class);
         $this->call(CoursesTableSeeder::class);
+        $this->call(UserCourseTableSeeder::class);
+        $this->call(TeacherCourseTableSeeder::class);
     }
 }

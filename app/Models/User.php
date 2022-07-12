@@ -32,14 +32,14 @@ class User extends Authenticatable
         return $this->hasMany(Review::class);
     }
 
-    public function userCourse()
+    public function courses()
     {
         return $this->belongsToMany(Courses::class, 'user_id', 'course_id');
     }
 
-    public function teacherCourse()
+    public function teacherCourses()
     {
-        return $this->belongsToMany(Courses::class, 'Teacher_course', 'user_id', 'course_id');
+        return $this->belongsToMany(Courses::class, 'Teacher_course', 'user_id');
     }
 
     public function lessons()

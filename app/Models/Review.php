@@ -19,13 +19,13 @@ class Review extends Model
         'parent_id',
     ];
 
-    public function courses()
+    public function course()
     {
-        return $this->belongsToMany(Course::class);
+        return $this->belongsTo(Course::class);
     }
 
-    public function users()
+    public function user()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(User::class);
     }
 }

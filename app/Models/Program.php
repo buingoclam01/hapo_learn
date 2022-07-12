@@ -15,8 +15,8 @@ class Program extends Model
         'lesson_id'
     ];
 
-    public function lessons()
+    public function lesson()
     {
-        return $this->belongsToMany(Lesson::class, 'lesson_id');
+        return $this->belongsTo(Lesson::class, 'lesson_id');
     }
 }
