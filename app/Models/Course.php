@@ -34,11 +34,11 @@ class Course extends Model
 
     public function teachers()
     {
-        return $this->belongsToMany(User::class, 'teacher_course', 'course_id');
+        return $this->belongsToMany(User::class, 'teacher_course', 'course_id', 'user_id');
     }
 
     public function tags()
     {
-         return $this ->hasMany(Tag::class, 'course_id');
+         return $this ->hasMany(Tag::class,);
     }
 }

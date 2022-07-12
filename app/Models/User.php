@@ -34,16 +34,16 @@ class User extends Authenticatable
 
     public function userCourse()
     {
-        return $this->belongsToMany(Courses::class);
+        return $this->belongsToMany(Courses::class, 'user_id', 'course_id');
     }
 
     public function teacherCourse()
     {
-        return $this->belongsToMany(Courses::class, 'Teacher_course');
+        return $this->belongsToMany(Courses::class, 'Teacher_course', 'user_id', 'course_id');
     }
 
     public function lessons()
     {
-        return $this->belongsToMany(Lesson::class);
+        return $this->belongsToMany(Lesson::class, 'lesson_id', 'user_id');
     }
 }
