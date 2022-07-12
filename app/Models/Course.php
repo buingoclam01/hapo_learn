@@ -39,6 +39,6 @@ class Course extends Model
 
     public function tags()
     {
-         return $this ->hasMany(Tag::class,);
+         return $this ->hasMany(Tag::class);
     }
 }
