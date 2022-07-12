@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use Faker\Generator as faker;
 
-
 class CourseFactory extends Factory
 {
     /**
@@ -19,7 +18,7 @@ class CourseFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'avatar' => $this->faker->imageUrl(50, 50),
-            'description' => $this->faker->text( 100),
+            'description' => $this->faker->text(100),
             'price' => $this->faker->numberBetween(1000, 100000)
         ];
     }
