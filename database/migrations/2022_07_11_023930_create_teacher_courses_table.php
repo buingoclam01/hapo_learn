@@ -13,7 +13,7 @@ class CreateTeacherCoursesTable extends Migration
      */
     public function up()
     {
-        Schema::create('teacher_courses', function (Blueprint $table) {
+        Schema::create('teacher_course', function (Blueprint $table) {
             $table->integer('user_id')->nullable();
             $table->integer('course_id')->nullable();
             $table->string('teacher_course_time')->nullable();
@@ -27,6 +27,6 @@ class CreateTeacherCoursesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teacher_courses');
+        Schema::dropIfExists('teacher_course');
     }
 }

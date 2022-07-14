@@ -19,9 +19,9 @@ class UserCourseFactory extends Factory
     public function definition()
     {
         return [
-            'register_lesson_time' => $this ->faker->time(),
-            'course_id' => $this ->faker->randomElement(Course::pluck('id')),
-            'user_id' => $this ->faker->randomElement(User::pluck('id')),
+            'register_lesson_time' => $this->faker->time(),
+            'course_id' => $this->faker->randomElement(Course::pluck('id')),
+            'user_id' => $this->faker->randomElement(User::pluck('id')),
         ];
     }
 }
