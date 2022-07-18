@@ -50,9 +50,7 @@
                             </p>
                         </div>
                         <div class="list-address">
-                            <p>
-                                <a href="#"> facebook.com/tuyen.dung.haposoft </a>
-                            </p>
+                            
                         </div>
                     </div>
                 </div>
