@@ -1,0 +1,108 @@
+  .login{
+    margin: 0;
+    background-color: #E5E5E5;
+    padding-top: 170px;
+    padding-bottom: 100px;
+
+    .login-form {
+        max-width: 40%;
+    }
+
+  .card-header{
+        background: white;
+        text-align: center;
+        font-weight: 700;
+        color: $green;
+        font-size: 30px;
+        border: 0;
+        margin-top: 15px;
+    }
+    .form-group label {
+        font-weight: 400;
+        font-size: 20px;
+    }
+  .input-login{
+    max-width: 100%;
+  }
+  .input-login input {
+    background-color: #F5F5F5;
+  }
+  .mt-20 {
+    margin-top: 20px;
+  }
+  .mt-40 {
+    margin-top: 40px;
+  }
+  .login-btn-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    a{
+        color: $green;
+        text-decoration: underline;
+        outline: none;
+        box-shadow: none;
+    }
+  }
+  .login-btn-container button {
+    background-color: $green;
+    color: white;
+    box-shadow: inset 0px 1.5px 2px #6F8710;
+    border-radius: 15px;
+    font-weight: 400;
+    padding: 8px 55px;
+  }
+  .form-text{
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .form-text hr {
+    border: 0;
+    height: 1px;
+    background-color: #808080;
+  }
+
+  .login-form p {
+    position: absolute;
+    font-weight: 400;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    background-color: white;
+    padding: 0 8px 6px;
+  }
+
+  .btn-google {
+    background-color: white;
+    color: $red;
+    border: 1px solid $pink;
+    width: 80%;
+    border-radius: 17px;
+    margin: 0 35px;
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+
+    i {
+        font-size: 25px;
+        display: block;
+        margin: 0 7px;
+        font-weight: 400;
+    }
+
+  }
+  .btn-register {
+    display: block;
+    width: 75%;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 30px auto 0;
+    background-color:#B2D235;
+    box-shadow: inset 0px 1.5px 2px #6F8710;
+    color: white;
+    font-weight: 500;
+  }
+
+}

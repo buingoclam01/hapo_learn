@@ -18,9 +18,9 @@ class CreateReviewsTable extends Migration
             $table->string('time')->nullable();
             $table->string('message')->nullable();
             $table->string('rate')->nullable();
-            $table->integer('lesson_id')->nullable();
-            $table->integer('user_id')->nullable();
-            $table->integer('parent_id')->nullable();
+            $table->integer('lesson_id');
+            $table->integer('user_id');
+            $table->integer('parent_id');
             $table->timestamps();
             $table->softDeletes();
         });

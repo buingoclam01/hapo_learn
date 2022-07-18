@@ -19,9 +19,9 @@ class TeacherCourseFactory extends Factory
     public function definition()
     {
         return [
-            'teacher_course_time' => $this->faker->time(),
             'course_id' => $this ->faker->randomElement(Course::pluck('id')),
             'user_id' => $this ->faker->randomElement(User::pluck('id')),
+            'teacher_course_time' => $this->faker->time(),
         ];
     }
 }

@@ -105,15 +105,16 @@
                         <a href="#">
                             <i class="fa-solid fa-phone"></i>
                         </a>
-                    </p>   
+                    </p>
                 </div>
             </div>
             <p class="slogan-company">
-              Interactive lessons, "on-the-go" practice, peer support.</p> 
+              Interactive lessons, "on-the-go" practice, peer support.</p>
             </div>
-            </div> 
+            </div>
         </div>
     </div>
     <div class="clear"></div>
     <div class="copyright"> © 2020 HapoLearn, Inc. All rights reserved. </div>
 </footer>
+

@@ -10,6 +10,8 @@ class UserCourse extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $table = 'user_course';
+
     protected $fillable = [
         'user_id',
         'course_id',
