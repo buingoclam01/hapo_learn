@@ -18,7 +18,7 @@ class CreateUserCourseTable extends Migration
             $table->integer('course_id');
             $table->string('register_lesson_time')->nullable();
             $table->timestamps();
-
+            $table->softDeletes();
         });
     }
 
