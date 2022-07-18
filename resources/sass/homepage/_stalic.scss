@@ -7,7 +7,7 @@
       font-weight: 900;
       color: darkblue;
   }
-      
+
       .line-border{
         width: 290px;
         height: 8px;
@@ -25,10 +25,10 @@
     justify-content: space-between;
     margin-top: 30px;
     padding-bottom: 150px;
-    
+
     .list-item {
       text-align: center;
-  
+
       .list-items-title {
         width: 100%;
         text-align: center;
@@ -36,7 +36,7 @@
         font-weight: 700;
         color: gray;
       }
-  
+
       .list-item-number {
         width: 100%;
         font-size: 35px;
@@ -46,18 +46,18 @@
       }
     }
   }
- 
+
   .clear {
     clear: both;
   }
-  
+
   @media(max-width:500px) {
     .list-statistic {
       display: block ;
       padding-bottom: 50px ;
-  
+
       .list-item{
         margin-top: 30px ;
       }
     }
-  }
+}
