@@ -50,9 +50,6 @@
                             </p>
                         </div>
                         <div class="list-address">
-                            <p>
-                                <a href="#"> facebook.com/tuyen.dung.haposoft </a>
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -105,13 +102,13 @@
                         <a href="#">
                             <i class="fa-solid fa-phone"></i>
                         </a>
-                    </p>   
+                    </p>
                 </div>
             </div>
             <p class="slogan-company">
-              Interactive lessons, "on-the-go" practice, peer support.</p> 
+              Interactive lessons, "on-the-go" practice, peer support.</p>
             </div>
-            </div> 
+            </div>
         </div>
     </div>
     <div class="clear"></div>
