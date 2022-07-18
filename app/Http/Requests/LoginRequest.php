@@ -31,10 +31,9 @@ class LoginRequest extends FormRequest
 
     public function messages()
     {
-    return [
-        'required' => __('validation.required'),
-        'max' => __('validation.max'),
-    ];
-
+        return [
+            'required' => __('validation.required'),
+             'max' => __('validation.max'),
+        ];
     }
 }
