@@ -16,10 +16,10 @@
                     <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login">ALL COURSES</a>
+                    <a class="nav-link" href="#">ALL COURSES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="register" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link" href="#">
                         LOGIN/REGISTER
                     </a>
                 </li>
