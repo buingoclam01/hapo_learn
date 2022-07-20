@@ -33,10 +33,10 @@
     &:hover {
       background-color: yellowgreen;
       border-radius: 20px;
-
     }
   }
-  .logout-btn{
+
+  .logout-btn {
     border: 0;
     background-color: transparent;
   }
@@ -44,12 +44,14 @@
   .navbar-icons {
     display: none;
   }
+
   .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 0.6);
     font-weight: 800;
 
   }
 }
+
 @media (max-width: 990px) {
 	.main-header {
     z-index: 5;

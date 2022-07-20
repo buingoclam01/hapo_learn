@@ -60,6 +60,6 @@ class RegisterController extends Controller
             Auth::login($user);
             return redirect()->route('home');
         }
-        return redirect()->back()->with('success', __('message.register_success'));
+        return redirect()->back()->with('error', __('message.register_error'));
     }
 }

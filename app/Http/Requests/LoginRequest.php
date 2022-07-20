@@ -25,7 +25,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'name' => ['required', ],
-            'password' => ['required', 'max:6', ],
+            'password' => ['required', 'min:6', ],
         ];
     }
 
@@ -33,7 +33,14 @@ class LoginRequest extends FormRequest
     {
         return [
             'required' => __('validation.required'),
-             'max' => __('validation.max'),
+             'min' => __('validation.min'),
+        ];
+    }
+    public function attributes()
+    {
+        return [
+            'name' => 'Tên tài khoản',
+            'password' => 'Mật khẩu',
         ];
     }
 }
