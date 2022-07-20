@@ -39,12 +39,14 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
     public function login(LoginRequest $request)
     {
         $credentials = [
             'name' => $request['name'],
             'password' => $request['password'],
         ];
+
         if (Auth::attempt($credentials)) {
             return redirect('/');
         } else {
