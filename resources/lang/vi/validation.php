@@ -11,5 +11,4 @@ return [
     'unique' => ':attribute đã tồn tại',
     'email' => ':attribute không hợp lệ',
     'same' => ':attribute không trùng nhau',
-    'confirmed' => ':attribute không trùng nhau',
 ];
