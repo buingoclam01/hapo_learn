@@ -20,7 +20,7 @@ class CourseFactory extends Factory
             'name' => $this->faker->name(),
             'avatar' => $this->faker->imageUrl(50, 50),
             'description' => $this->faker->text(50),
-            'price' => $this->faker->numberBetween(1000, 100000)
+            'price' => $this->faker->numberBetween(100, 100000)
         ];
     }
 }

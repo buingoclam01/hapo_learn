@@ -9,7 +9,7 @@
         <div class="banner-title">
             <p class="banner-title-content">Learn Anytime, Anywhere</p>
             <p class="banner-title-content banner-title-content-b">
-                at HapoLearn<img src="{{ asset('images/banner.png') }}" alt="">!  
+                at HapoLearn<img src="{{ asset('images/banner.png') }}" alt="">!
             </p>
         </div>
         <div class="banner-conlit">
@@ -21,10 +21,10 @@
         <a href="#" class="button-1">Start Learning Now!</a>
     </div>
     <div class="banner-bottom">
-        
+
     </div>
     <div class="overlay">
-           
+
     </div>
 </section>
 <div class="main">
@@ -135,7 +135,7 @@
        <p class="text-banner-connect">
           <i class="fa-solid fa-circle-check"></i>  Interactive lessons, "on-the-go" practice, peer support.
        </p>
-    </div>   
+    </div>
         <div class="banner-connect-img"> <img src="{{ asset('images/laptop.png')}}" alt="">  </div>
 </div>
 
@@ -155,7 +155,7 @@
           </div>
           <div class="user-feed">
              <div class="face">
-                <img src="{{ asset('images/face.png')}}" alt="">
+                <img src="{{ asset('images/face.png') }}" alt="">
              </div>
              <div class="info">
                 <div class="name">
@@ -181,7 +181,7 @@
           </div>
           <div class="user-feed">
              <div class="face">
-                <img src="{{ asset('images/face.png')}}" alt="">
+                <img src="{{ 'https://source.unsplash.com/random' }}" alt="">
              </div>
              <div class="info">
                 <div class="name">
@@ -233,7 +233,33 @@
           </div>
           <div class="user-feed">
              <div class="face">
-                <img src="{{ asset('images/face.png')}}" alt="">
+                <img src="{{ 'https://source.unsplash.com/random' }}" alt="">
+             </div>
+             <div class="info">
+                <div class="name">
+                   Hoàng Nguyễn Nguyên
+                </div>
+                <div class="text">
+                   PHP
+                </div>
+                <div class="star">
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                   <span class="fa fa-star checked"></span>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="item-feed">
+          <div class="content-feed">
+             <div class="line-d"></div>
+             “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
+          </div>
+          <div class="user-feed">
+             <div class="face">
+                <img src="{{ 'https://source.unsplash.com/random'}}" alt="">
              </div>
              <div class="info">
                 <div class="name">
@@ -278,32 +304,6 @@
              </div>
           </div>
        </div>
-       <div class="item-feed">
-          <div class="content-feed">
-             <div class="line-d"></div>
-             “A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.”
-          </div>
-          <div class="user-feed">
-             <div class="face">
-                <img src="{{ asset('images/face.png')}}" alt="">
-             </div>
-             <div class="info">
-                <div class="name">
-                   Hoàng Nguyễn Nguyên
-                </div>
-                <div class="text">
-                   PHP
-                </div>
-                <div class="star">
-                   <span class="fa fa-star checked"></span>
-                   <span class="fa fa-star checked"></span>
-                   <span class="fa fa-star checked"></span>
-                   <span class="fa fa-star checked"></span>
-                   <span class="fa fa-star checked"></span>
-                </div>
-             </div>
-          </div>
-       </div> 
        </div>
     </div>
  </div>
