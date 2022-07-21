@@ -13,18 +13,27 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto w-100">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">HOME <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/home">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">ALL COURSES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}" aria-haspopup="true" aria-expanded="false">
-                        LOGIN/REGISTER
-                    </a>
+                    <a class="nav-link" href="#">PROFILE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">PROFILE</a>
+                @if(Auth::check())
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                            <button type="submit" class="nav-link logout-btn">
+                                LOGOUT
+                            </button>
+                        </form>
+                @else
+                        <a class="nav-link" href="{{ route('login') }}" aria-haspopup="true" aria-expanded="false">
+                            LOGIN/REGISTER
+                        </a>
+                @endif
                 </li>
             </ul>
         </div>
