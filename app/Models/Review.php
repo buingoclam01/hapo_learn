@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Review;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Review extends Model
@@ -14,7 +15,7 @@ class Review extends Model
         'time',
         'message',
         'rate',
-        'lesson_id',
+        'course_id',
         'user_id',
         'parent_id',
     ];
@@ -27,5 +28,10 @@ class Review extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function scopeMain($query)
+    {
+        return $query->orderBy('parent_id', config('course.sort_hight_to_low'))->limit(config('course.review_number_home'));
     }
 }

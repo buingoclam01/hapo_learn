@@ -12,7 +12,7 @@ class Course extends Model
 
     protected $fillable = [
        'name',
-       'avatar',
+       'image',
        'description',
        'price',
     ];
@@ -40,5 +40,15 @@ class Course extends Model
     public function tags()
     {
          return $this ->belongsToMany(Tag::class);
+    }
+
+    public function scopeOther($query)
+    {
+        return $query->limit(config('data.course_num_home'));
+    }
+
+    public function scopeMain($query)
+    {
+        return $query->orderBy('name', config('course.sort_low_to_hight'))->limit(config('course.course_number_home'));
     }
 }

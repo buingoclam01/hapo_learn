@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Course;
 use App\Models\User;
-use App\Models\Lesson;
+use App\Models\Review;
 
 class ReviewFactory extends Factory
 {
@@ -19,10 +19,9 @@ class ReviewFactory extends Factory
         return [
            'course_id' => $this->faker->randomElement(Course::pluck('id')),
            'user_id' => $this->faker->randomElement(User::pluck('id')),
-           'lesson_id' => $this->faker->randomElement(Lesson::pluck('id')),
-           'time' => $this->faker->time(),
+           'parent_id' => $this->faker->numberBetween(0, 10),
            'message' => $this->faker->text(100),
-           'rate' => $this->faker->numberBetween(0, 5),
+           'rate' => $this->faker->numberBetween(1, 5),
 
         ];
     }

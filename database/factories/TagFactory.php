@@ -3,10 +3,10 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Lesson;
+use App\Models\Tag;
 use App\Models\Course;
 
-class LessonFactory extends Factory
+class TagFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,9 +17,7 @@ class LessonFactory extends Factory
     {
         return [
             'course_id' => $this->faker->randomElement(Course::pluck('id')),
-            'title' => $this->faker->text(50),
-            'time' => $this->faker->time('H:00:00'),
-            'description' => $this->faker->text(255),
+            'name' => $this->faker->randomElement(['HTML', 'CSS', 'JS', 'PHP', 'Laravel', 'Ruby']),
         ];
     }
 }
