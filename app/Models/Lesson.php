@@ -31,9 +31,4 @@ class Lesson extends Model
     {
         return $this->belongsToMany(User::class, 'lesson_user', 'user_id');
     }
-
-    public function scopeCountLesson($query)
-    {
-        return $query->limit(config('course.review_number_home'))->get();
-    }
 }
