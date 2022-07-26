@@ -6,6 +6,8 @@ use Database\Seeders\UsersTableSeeder;
 use Database\Seeders\CoursesTableSeeder;
 use Database\Seeders\TeacherCourseTableSeeder;
 use Database\Seeders\UserCourseTableSeeder;
+use Database\Seeders\ProgramsTabSeeder;
+use Database\Seeders\TagsTabSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,7 +20,11 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(UsersTableSeeder::class);
         $this->call(CoursesTableSeeder::class);
+        $this->call(ReviewTableSeeder::class);
         $this->call(UserCourseTableSeeder::class);
         $this->call(TeacherCourseTableSeeder::class);
+        $this->call(LessonsTableSeeder::class);
+        $this->call(ProgramsTabSeeder::class);
+        $this->call(TagsTabSeeder::class);
     }
 }

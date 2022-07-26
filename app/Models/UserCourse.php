@@ -16,6 +16,10 @@ class UserCourse extends Model
         'user_id',
         'course_id',
         'register_lesson_time',
-
     ];
+
+    public function scopeLearner($query)
+    {
+        return $query->select('user_id')->groupBy('user_id');
+    }
 }
