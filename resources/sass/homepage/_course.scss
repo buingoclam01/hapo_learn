@@ -51,9 +51,10 @@
         height: 125px;
       }
     }
-
+    }
     .content-items {
       text-align: center;
+
       .title {
         font-size: 30px;
         line-height: 37px;
@@ -68,6 +69,8 @@
         font-size: 15px;
         font-weight: 400;
         color: $xam;
+        min-height: 70px;
+
       }
 
       .btn-link {
@@ -87,11 +90,11 @@
     .img-items1 {
       background-color: dodgerblue;
     }
-  }
+
 
   .space {
     margin-top: 45px;
-  }
+    }
 
   .view-more-title {
     margin-top: -40px;
@@ -150,6 +153,7 @@
           text-align: right;
           margin-right: 10px;
           margin-top: 40px;
+
           a {
             font-size: 14px;
             padding: 7px 14px;
@@ -161,6 +165,7 @@
       .img-items {
         height: 100%;
       }
+
       .img-items img {
         width: 200px;
       }
@@ -185,9 +190,11 @@
   .main-content {
     background-color: white;
   }
+
   .content-text {
     width: 90%;
     font-size: 13px;
+
   }
   .btn-link a {
     font-size: 15px;

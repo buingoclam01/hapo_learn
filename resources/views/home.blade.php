@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 <section class="banner">
-
     <div class="banner-container">
         <p class="banner-img">
     <img src="{{ asset('images/bannerhome.png') }}" alt="">
@@ -21,10 +20,8 @@
         <a href="#" class="button-1">Start Learning Now!</a>
     </div>
     <div class="banner-bottom">
-
     </div>
     <div class="overlay">
-
     </div>
 </section>
 <div class="main">
@@ -33,8 +30,7 @@
         <div class="list-items">
            @foreach($courses as $course)
           <div class="items">
-             <div class="img-items img-items1"> <img src="{{ $course->image }}" alt="">
-
+             <div class="img-items img-items1"> <img src="{{ $course['image'] }}" alt="">
              </div>
              <div class="content-items">
                 <p class="title">{{ $course->name }}</p>
@@ -51,14 +47,14 @@
        <p class="big-tittle"> Other courses</p>
        <div class="line-border"></div>
        <div class="list-items">
-       @foreach($courses as $course)
+       @foreach($otherCourses as $otherCourse)
           <div class="items">
              <div class="img-items img-items1">
-                <img src="{{ $course->image }}" alt="">
+                <img src="{{ $otherCourse->image }}" alt="">
              </div>
              <div class="content-items">
-                <p class="title">{{ $course->name }}</p>
-                <p class="content-text">{{ Str::limit($course->description, 60) }}</p>
+                <p class="title">{{ $otherCourse->name }}</p>
+                <p class="content-text">{{ Str::limit($otherCourse->description, 60) }}</p>
                 <p class="btn-link">
                    <a href="#" >Take This Course</a>
                 </p>
@@ -71,7 +67,6 @@
        </div>
     </div>
  </div>
-
  <div class="banner-connect" style="background-image: url('{{ asset('images/backgroud.png')}}');">
     <div class="banner-connect-content">
        <p class="banner-connect-content-title">
@@ -95,7 +90,6 @@
     </div>
         <div class="banner-connect-img"> <img src="{{ asset('images/laptop.png')}}" alt="">  </div>
 </div>
-
 <div class="feed-back">
     <p class="big-tittle">
        Feedback
@@ -118,13 +112,12 @@
              <div class="info">
                 <div class="name">{{ $review->user->name }}</div>
                 <div class="text">{{ $review->course->name }}</div>
-
                 <div class="star">
                 @php
-                                $stars = $review['rate'];
-                            @endphp
-                            @for($i = 0; $i < $stars ; $i++) <i class="fa fa-star checked"></i>
-                            @endfor
+                    $stars = $review['rate'];
+                    @endphp
+                    @for($i = 0; $i < $stars ; $i++) <i class="fa fa-star checked"></i>
+                @endfor
                 </div>
              </div>
           </div>
@@ -144,12 +137,10 @@
  </div>
  <div class="stactistic">
     <p class="big-tittle"> Stactistic </p>
-
     <div class="line-border"></div>
     <div class="list-statistic">
        <div class="list-item">
           <div class="list-items-title">Courses </div>
-
           <div class="list-item-number"> {{ $countCourses }} </div>
        </div>
        <div class="list-item">

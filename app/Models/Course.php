@@ -42,12 +42,13 @@ class Course extends Model
          return $this ->belongsToMany(Tag::class);
     }
 
-    public function scopeOther($query)
-    {
-        return $query->limit(config('data.course_num_home'));
-    }
 
     public function scopeMain($query)
+    {
+        return $query->limit(config('course.course_number_home'));
+    }
+
+    public function scopeOther($query)
     {
         return $query->orderBy('name', config('course.sort_low_to_hight'))->limit(config('course.course_number_home'));
     }

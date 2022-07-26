@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\UserCourse;
 use App\Models\Lesson;
@@ -19,9 +18,10 @@ class HomeController extends Controller
     {
         $courses = Course::main()->get();
         $reviews = Review::main()->get();
+        $otherCourses = Course::other()->get();
         $countCourses = Course::count();
         $countLessons = Lesson::count();
         $learners = UserCourse::learner()->get()->count();
-        return view('home', compact('courses', 'reviews', 'countCourses', 'countLessons', 'learners'));
+        return view('home', compact('courses', 'reviews','otherCourses', 'countCourses', 'countLessons', 'learners'));
     }
 }
