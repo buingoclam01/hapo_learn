@@ -1,81 +1,90 @@
-.course
-{
-    .list-course {
-        margin-top: 150px;
-    }
+.course {
+    margin-top: 160px;
 }
-.list-courses{
-    display: flex;
-    margin-top: 50px;
-}
+.course-content {
+    padding-top: 40px;
 
-.btn-filter,
-.box-search,
-.btn-search,
+
+    .search-form {
+      display: flex;
+    }
+
+    .mr-15 {
+      margin-right: 15px;
+    }
+
+    .filter-btn {
+      background-color: white;
+      border: 1px solid #C4C4C4;
+      font-weight: 700;
+      padding: 4px 16px;
+      border-radius: 4px;
+      color: #505353;
+      cursor: pointer;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 355px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid #C4C4C4;
+    }
+
+    .search-box i {
+      position: absolute;
+      top: 5px;
+      right: 6px;
+      font-size: 18px;
+      background-color: white;
+      padding: 3px;
+      color: #505353;
+    }
+
+    .search-btn {
+      color: white;
+      background-color: #B2D235;
+      font-weight: 700;
+      border: 0;
+      border-radius: 4px;
+      font-size: 15px;
+      padding: 6px 10px;
+    }
+  }
+
 .item-title,
 .item-description,
 .course-learners,
 .course-number {
-
+    font-family: $font-family;
     font-style: normal;
     font-weight: 700;
     line-height: 22px;
-    color: black;
+    color: $yello;
 }
 
-.btn-filter {
-    font-size: 16px;
-    background-color: transparent;
-    border: 1px solid;
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
-}
 
-.box-search {
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 0;
-    font-size: 16px;
-
-    button {
-        border: 0;
-        background: transparent;
-    }
-}
-
-.input-search {
-    border: 0;
-    line-height: 38px;
-    width: 91%;
-    padding-left: 9px;
-}
-
-.btn-search {
-    line-height: 38px;
-    border: 1px solid ;
-    font-size: 16px;
-    color: white;
-    border-radius: 5px;
-    width: 100px;
-    height: 40px;
-}
 
 .list-item {
     margin-top: 40px;
-    justify-content: center;
-    margin: 0 10px 0 10px;
+    
+    .row{
+
+        justify-content: center;
+    }
 }
 
 .box-item {
-    border: 1px solid;
+    border: 1px solid $bg;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
-    max-width: 90%;
-    border-radius:15px;
+    border-radius: 10px;
 }
 
 .course-item {
-    border-bottom: 2px solid $bg ;
+    border-bottom: 2px solid $bg;
 }
 
 .img-item {
@@ -92,35 +101,33 @@
 
 .item-title {
     font-size: 25px;
-    color: black;
+    color: $grey;
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .item-description {
     font-size: 18px;
-    color: black;
+    color: $grey;
     font-weight: 400;
 }
-.row{
-    margin-left: 0;
-    margin-right: 0;
-}
+
 .btn-more {
     position: absolute;
     bottom: 40px;
     right: -10px;
-
+    background-color: $yello;
     color: white;
     width: 106px;
     height: 42px;
     border-radius: 22px;
     border: 0;
+    font-weight: 700;
 }
 
 .course-learners {
     font-size: 25px;
-    color: black;
+    color:$grey;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -128,4 +135,113 @@
 .course-number {
     font-size: 30px;
     margin-bottom: 19px;
+    color: $yello;
+    text-align: center;
+    font-family: $font-family;
+}
+
+.filter-content {
+    background-color: white;
+    border: 1px solid $bg;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: none;
+    padding: 4px 20px;
+    min-height: 100px;
+
+    span {
+      font-size: 16px;
+      color: $grey;
+      font-weight: 700;
+    }
+
+    & > span {
+      min-width: 90px;
+      margin-top: 8px;
+    }
+
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filter-new,
+    .filter-old {
+      display: block;
+      font-size: 14px;
+      border-radius: 2px;
+      padding: 6px 10px;
+      width: 80px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .filter-new {
+      color: white;
+      background-color: $yello;
+      margin-left: 10px;
+    }
+
+    .filter-old {
+      color: $grey;
+      background-color: $bg;
+      margin-left: 10px;
+    }
+
+    .filter-option-container {
+      border: 1px solid $bg;
+      border-radius: 2px;
+      padding: 4px;
+      width: 180px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      margin-left: 10px;
+      padding-left: 10px;
+      position: relative;
+      cursor: default;
+    }
+
+    .filter-option-container:hover .filter-option {
+      display: block;
+    }
+
+    .filter-option {
+      list-style: none;
+      margin: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      border: 1px solid $bg;
+      width: 100%;
+      padding: 0;
+      background-color: white;
+      display: none;
+      border-radius: 2px;
+      z-index: 1;
+    }
+
+    .filter-option li {
+      width: 100%;
+    }
+
+    .filter-option a {
+      color: $grey;
+      display: block;
+      margin: 0 10px;
+      border-bottom: 1px solid $bg;
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: none;
+      padding: 4px 0;
+    }
+
+    .filter-option li:last-child a {
+      border: 0;
+    }
+}
+.filter-show {
+    display: flex;
 }

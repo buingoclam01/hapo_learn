@@ -29,12 +29,12 @@ class Course extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class,'user_course');
     }
 
     public function teacherCourse()
     {
-        return $this->belongsToMany(User::class, 'teacher_course', 'user_id');
+        return $this->belongsToMany(User::class, 'teacher_course');
     }
 
     public function tags()
@@ -52,4 +52,27 @@ class Course extends Model
     {
         return $query->orderBy('name', config('course.sort_low_to_hight'))->limit(config('course.course_number_home'));
     }
+
+    public function getLearnersAttribute()
+    {
+        return $this->users()->count();
+    }
+
+    public function getLessonsAttribute()
+    {
+        return $this->lessons()->count();
+    }
+
+    public function getTimesAttribute()
+    {
+        return $this->lessons()->sum('time');
+    }
+
+    public function scopeSearch($query, $data)
+    {
+        if (isset($data['keyword'])) {
+            $query->where('name', 'LIKE', '%' . $data['keyword'] . '%')->orWhere('description', 'LIKE', '%' . $data['keyword'] . '%');
+    }
+    }
 }
+

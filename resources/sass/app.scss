@@ -3,6 +3,7 @@
 
 @import "~slick-carousel/slick/slick";
 @import "~slick-carousel/slick/slick-theme";
+@import "~select2/dist/css/select2.css";
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
@@ -20,3 +21,4 @@
 @import 'homepage/login';
 @import 'homepage/logout';
 @import 'homepage/list_course';
+@import 'homepage/pagination';

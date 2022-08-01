@@ -16,7 +16,7 @@
                     <a class="nav-link" href="{{ route('home') }}" >HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('courses') }}">ALL COURSES</a>
+                    <a class="nav-link" href="{{ route('courses.index') }}">ALL COURSES</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">PROFILE</a>

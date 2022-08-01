@@ -14,7 +14,7 @@ class Lesson extends Model
         'title',
         'time',
         'description',
-        'cours_id',
+        'course_id',
     ];
 
     public function course()
@@ -29,6 +29,6 @@ class Lesson extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'lesson_user', 'user_id');
+        return $this->belongsToMany(User::class);
     }
 }
