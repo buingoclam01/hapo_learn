@@ -47,8 +47,8 @@ class User extends Authenticatable
         return $this->belongsToMany(Lesson::class, 'lesson_id', 'user_id');
     }
 
-    public static function teachers()
+    public function scopeTeachers($query)
     {
-        return self::where('role', config('roles.teacher'));
+        return $query->where('role', config('roles.teacher'));
     }
 }

@@ -20,7 +20,7 @@ class TeacherCourseFactory extends Factory
     {
         return [
             'course_id' => $this ->faker->randomElement(Course::pluck('id')),
-            'user_id' => $this ->faker->randomElement(User::pluck('id')),
+            "user_id" => $this->faker->randomElement(User::where('role', config('roles.teacher'))->pluck('id')),
             'teacher_course_time' => $this->faker->time(),
         ];
     }

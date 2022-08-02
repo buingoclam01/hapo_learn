@@ -1,85 +1,86 @@
 @extends('layouts.app')
+
 @section('content')
-<section class="course">
-     <div class="container course-content">
-     <form action="" method="get">
+<section class="container-fluid course-container">
+    <div class="container course-content">
+        <form action="{{ route('courses.index') }}" method="GET">
                 <div class="search-form">
                     <div class="filter-btn mr-15">
                         <i class="fa-solid fa-filter"></i>
-                        Filter
+                        {{ __('course.filter') }}
                     </div>
                     <div class="search-box mr-15">
-                        <input type="text" name="search" placeholder="Search..." name="keyword" id="keyword"
-                        @if(isset($data['keyword'])) value="{{ $data['keyword'] }}" @endif />
+                        <input type="text" name="keyword" id="keyword" placeholder="{{ __('course.enter_keywords') }}" @if(isset($data['keyword'])) value="{{ $data['keyword'] }}" @endif>
 
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <label for="keyword"><i class="fa-solid fa-magnifying-glass"></i></label>
                     </div>
-                    <button class="search-btn mr-15" type="submit">Tìm kiếm</button>
+                    <button class="search-btn mr-15" type="submit">{{ __('course.search') }}</button>
                 </div>
-            </form>
-            <div class="container filter-content">
-                <span>Lọc theo</span>
+
+                <div class="container filter-content">
+                    <span>{{ __('course.filter_by') }}</span>
                 <div>
-                    <a class="filter-new" href="#">Mới nhất</a>
-                    <a class="filter-old" href="#">Cũ nhất</a>
-                    <span class="filter-option-container">
-                        <span>Teacher</span>
-                        <ul class="filter-option">
-                            <li><a href="#">Giáo viên A</a></li>
-                            <li><a href="#">giáo viên B</a></li>
-                            <li><a href="#">Giáo viên C</a></li>
-                        </ul>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </span>
-                    <span class="filter-option-container">
-                        <span>Số người học</span>
-                        <ul class="filter-option">
-                            <li><a href="#">Sinh viên A</a></li>
-                            <li><a href="#">Sinh viên B</a></li>
-                            <li><a href="#">Sinh viên C</a></li>
-                        </ul>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </span>
-                    <span class="filter-option-container">
-                        <span>Thời gian học</span>
-                        <ul class="filter-option">
-                            <li><a href="#">Thời gian a</a></li>
-                            <li><a href="#">Thời gian B</a></li>
-                            <li><a href="#">Thời gian C</a></li>
-                        </ul>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </span>
-                    <span class="filter-option-container">
-                        <span>Số bài học</span>
-                        <ul class="filter-option">
-                            <li><a href="#">Tăng dần</a></li>
-                            <li><a href="#">Giảm dần</a></li>
+                    <input type="radio" name="created_time" id="filterNew" value="newest" @if(isset($data['created_time']) && $data['created_time'] == 'newest') checked @endif><label for="filterNew">{{ __('course.newest') }}</label>
+                    <input type="radio" name="created_time" id="filterOld" value="oldest" @if(isset($data['created_time']) && $data['created_time'] == 'oldest') checked @endif><label for="filterOld">{{ __('course.oldest') }}</label>
+                    <span class="filter-border filter-option-container">
+                        <span class="filter-teacher-title">{{ __('course.teacher') }}</span><br>
+                            <select class="w-100 js-basic-multiple" name="teachers[]" multiple="multiple">
+                                @foreach($teachers as $teacher)
+                                    <option value="{{$teacher->id}}"
+                                    @if(isset($data['teachers']) && in_array($teacher->id, $data['teachers'])) selected @endif>
+                                    {{ $teacher->name }}</option>
+                                @endforeach
+                            </select>
+                            <i class="filter-teacher-icon fa-solid fa-angle-down"></i>
+                        </span>
 
-                        </ul>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </span>
-                    <span class="filter-option-container">
+                        <span class="filter-border filter-option-container">
+                            <select class="js-basic-single" name="learner">
+                                <option @if(!isset($data['learner'])) selected @endif disabled hidden value="" >{{ __('course.number_of_learners') }}</option>
+                                <option @if(isset($data['learner']) && $data['learner'] == config('course.sort_low_to_hight')) selected @endif value="{{ config('course.sort_low_to_hight') }}">{{ __('course.ascending') }}</option>
+                                <option @if(isset($data['learner']) && $data['learner'] == config('course.sort_hight_to_low')) selected @endif value="{{ config('course.sort_hight_to_low') }}">{{ __('course.descending') }}</option>
+                                </select>
+                        </span>
 
-                        <span>Tags</span>
-                        <ul class="filter-option">
-                            <li><a href="#">1 2 3</a></li>
-                            <li><a href="#"> 3 4 5</a></li>
-                            <li><a href="#">6 5 4</a></li>
-                        </ul>
-                        <i class="fa-solid fa-angle-down"></i>
-
-                    </span>
                     <span class="filter-option-container">
-                        <span>Reviews</span>
-                        <ul class="filter-option">
-                            <li><a href="#">Giáo viên A</a></li>
-                            <li><a href="#">giáo viên B</a></li>
-                            <li><a href="#">Giáo viên C</a></li>
-                        </ul>
-                        <i class="fa-solid fa-angle-down"></i>
+                        <select class="js-basic-single" name="time">
+                            <option @if(!isset($data['time'])) selected @endif disabled hidden value="" >{{ __('course.study_time') }}</option>
+                            <option @if(isset($data['time']) && $data['time'] == config('course.sort_low_to_hight')) selected @endif value="{{ config('course.sort_low_to_hight') }}">{{ __('course.ascending') }}</option>
+                            <option @if(isset($data['time']) && $data['time'] == config('course.sort_hight_to_low')) selected @endif value="{{ config('course.sort_hight_to_low') }}">{{ __('course.descending') }}</option>
+                            </select>
                     </span>
+
+                    <span class="filter-option-container">
+                        <select class="js-basic-single" name="lesson">
+                                <option @if(!isset($data['lesson'])) selected @endif disabled hidden value="" >{{ __('course.number_of_lessons') }}</option>
+                                <option @if(isset($data['lesson']) && $data['lesson'] == config('course.sort_low_to_hight')) selected @endif value="{{ config('course.sort_low_to_hight') }}">{{ __('course.ascending') }}</option>
+                                <option @if(isset($data['lesson']) && $data['lesson'] == config('course.sort_hight_to_low')) selected @endif value="{{ config('course.sort_hight_to_low') }}">{{ __('course.descending') }}</option>
+                            </select>
+                    </span>
+
+                    <span class="filter-border filter-option-container">
+                        <span class="filter-teacher-title">{{ __('course.tags') }}</span><br>
+                            <select class="w-100 js-basic-multiple" name="tags[]" multiple="multiple">
+                                @foreach($tags as $tag)
+                                <option value="{{$tag->id}}"
+                                    @if(isset($data['tags']) && in_array($tag->id, $data['tags'])) selected @endif>
+                                    {{ $tag->name }}</option>
+                                @endforeach
+                            </select>
+                             <i class="filter-teacher-icon fa-solid fa-angle-down"></i>
+                    </span>
+
+                        <span class="filter-option-container">
+                            <select class="js-basic-single" name="review">
+                                <option @if(!isset($data['review'])) selected @endif disabled hidden value="" >{{ __('course.review') }}</option>
+                                <option @if(isset($data['review']) && $data['review'] == config('course.sort_low_to_hight')) selected @endif value="{{ config('course.sort_low_to_hight') }}">{{ __('course.ascending') }}</option>
+                                <option @if(isset($data['review']) && $data['review'] == config('course.sort_hight_to_low')) selected @endif value="{{ config('course.sort_hight_to_low') }}">{{ __('course.descending') }}</option>
+                            </select>
+                        </span>
                 </div>
             </div>
+        </form>
+
             <div class="row list-item ">
                 @foreach($courses as $course)
                     <div class="col-6 mb-4">
@@ -98,7 +99,7 @@
                                         </div>
                                         <div>
                                             <button class="btn-more">
-                                                More
+                                            {{ __('course.more') }}
                                             </button>
                                         </div>
                                     </div>
@@ -106,27 +107,27 @@
                                 <div class=" row justify-content-between">
                                     <div class="col-3">
                                         <div class="course-learners">
-                                            Learners
+                                        {{ __('course.learners') }}
                                         </div>
                                         <div class="course-number">
-                                            {{ $course->Learners }}
+                                            {{ $course->learners }}
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="course-learners">
-                                            Lessons
+                                        {{ __('course.lessons') }}
                                         </div>
                                         <div class="course-number">
-                                            {{ $course->Lessons }}
+                                            {{ $course->lessons }}
                                         </div>
                                     </div>
                                     <div class="col-3">
                                         <div class="course-learners">
-                                            Times
+                                        {{ __('course.times') }}
                                         </div>
                                         <div class="course-number">
 
-                                                {{ $course->Times }}(h)
+                                                {{ $course->times }}(h)
                                         </div>
                                     </div>
                                 </div>
@@ -136,7 +137,6 @@
                 @endforeach
             </div>
             {{ $courses->onEachSide(1)->links('layouts.pagination') }}
-        </div>
-     </div>
+    </div>
  </section>
 @endsection
