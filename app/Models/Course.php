@@ -80,7 +80,7 @@ class Course extends Model
 
         if (isset($data['teachers']) && !empty($data['teachers'])) {
             $query->whereHas('teacherCourse', function ($query) use ($data) {
-            $query->whereIn('user_id', $data['teachers']);
+                $query->whereIn('user_id', $data['teachers']);
             });
         }
 
@@ -98,7 +98,7 @@ class Course extends Model
 
         if (isset($data['tags']) && !empty($data['tags'])) {
             $query->whereHas('tags', function ($query) use ($data) {
-            $query->whereIn('tag_id', $data['tags']);
+                $query->whereIn('tag_id', $data['tags']);
             });
         }
 
