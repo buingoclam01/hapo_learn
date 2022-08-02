@@ -1,47 +1,37 @@
 .pagination {
+    margin-bottom: 0;
+    margin-top: 20px;
     justify-content: flex-end;
-    margin-top: 5px;
 
-    li {
-      height: 30px;
-      width: 30px;
-      border: 1px solid #B2D235;
-      margin: 0 4px;
-      border-radius: 4px;
-
-      a,
-      span {
-        display: block;
-        text-align: center;
-        line-height: 30px;
-        font-weight: 700;
-        color: #B2D235;
-      }
-
-      a {
-        text-decoration: none;
-      }
+    .page-item {
+      padding-right: 6px;
     }
 
-    li:first-child,
-    li:last-child {
-      width: 60px;
-    }
+    .page-link {
+      color: $main-bg;
+      border: 1px solid $main-bg;
 
-    .disabled,
-    .active {
-      background-color: #B2D235;
-
-      span {
+      &:hover {
+        background-color: $main-bg;
         color: white;
       }
     }
+  }
 
-    .three-dot {
-      background-color: transparent;
+  .page-item {
+    &.active {
+      .page-link {
+        background-color: $main-bg;
+        border-color: $main-bg;
+      }
+    }
+  }
 
-      span {
-        color: #B2D235;
+  .page-item {
+    &.disabled {
+      .page-link {
+        background-color: $main-bg;
+        color: white;
       }
     }
 }

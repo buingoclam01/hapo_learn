@@ -135,11 +135,11 @@
                         </div>
                     </div>
                 @endforeach
+                @if(count($courses) == 0)
+                <h3>   {{ __('course.erorr') }}</h3>
+                @endif
             </div>
             {{ $courses->appends(request()->query())->links() }}
-            @if(count($courses) == 0)
-            <h3>   {{ __('course.erorr') }}</h3>
-            @endif
     </div>
  </section>
 @endsection

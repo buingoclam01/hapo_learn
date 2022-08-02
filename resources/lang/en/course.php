@@ -19,5 +19,5 @@ return [
     'lessons' => 'Lessons',
     'times' => 'Times',
     'more' => 'More',
-    'erorr' => 'Không tìm thấy kết quả',
+    'erorr' => 'No result found'
 ];

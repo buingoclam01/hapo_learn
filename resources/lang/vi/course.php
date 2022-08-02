@@ -19,4 +19,5 @@ return [
     'lessons' => 'Số bài học',
     'learners' => 'Số người học',
     'more' => "Xem",
+    'erorr' => 'Không tìm thấy kết quả nào',
 ];
