@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Course;
 use App\Models\Tag;
 
-
 class CourseTagFactory extends Factory
 {
     /**

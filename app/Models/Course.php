@@ -68,8 +68,8 @@ class Course extends Model
         return $this->lessons()->sum('time');
     }
 
-    public function scopeSearch($query, $data) {
-
+    public function scopeSearch($query, $data)
+    {
         if (isset($data['keyword'])) {
             $query->where('name', 'LIKE', "%" . $data['keyword'] . "%")->orWhere('description', 'LIKE', "%" . $data['keyword'] . "%");
         }
@@ -80,7 +80,7 @@ class Course extends Model
 
         if (isset($data['teachers']) && !empty($data['teachers'])) {
             $query->whereHas('teacherCourse', function ($query) use ($data) {
-                $query->whereIn('user_id', $data['teachers']);
+            $query->whereIn('user_id', $data['teachers']);
             });
         }
 
@@ -98,7 +98,7 @@ class Course extends Model
 
         if (isset($data['tags']) && !empty($data['tags'])) {
             $query->whereHas('tags', function ($query) use ($data) {
-                $query->whereIn('tag_id', $data['tags']);
+            $query->whereIn('tag_id', $data['tags']);
             });
         }
 
@@ -107,5 +107,5 @@ class Course extends Model
         }
 
         return $query;
-        }
+    }
 }
