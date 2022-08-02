@@ -18,5 +18,6 @@ return [
     'learners' => 'Learners',
     'lessons' => 'Lessons',
     'times' => 'Times',
-    'more' => "More",
+    'more' => 'More',
+    'erorr' => 'Không tìm thấy kết quả',
 ];

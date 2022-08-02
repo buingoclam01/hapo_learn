@@ -14,16 +14,14 @@ class CourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function index(Request  $request)
-
-        {
-            $data = $request->all();
-            $teachers = User::teachers()->get();
-            $tags = Tag::all();
-            $courses = Course::paginate(10);
-            return view('course.index', compact('courses', 'teachers', 'tags', 'data'));
-        }
-
+    public function index(Request $request)
+    {
+        $data = $request->all();
+        $teachers = User::teachers()->get();
+        $tags = Tag::all();
+        $courses = Course::search($data)->paginate(10);
+        return view('course.index', compact('courses', 'teachers', 'tags', 'data'));
+    }
 
     /**
      * Show the form for creating a new resource.

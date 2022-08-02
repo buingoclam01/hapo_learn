@@ -29,7 +29,7 @@ class Course extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class,'user_course');
+        return $this->belongsToMany(User::class, 'user_course');
     }
 
     public function teacherCourse()
@@ -39,7 +39,7 @@ class Course extends Model
 
     public function tags()
     {
-         return $this ->belongsToMany(Tag::class);
+         return $this ->belongsToMany(Tag::class, 'course_tag');
     }
 
 
@@ -68,44 +68,44 @@ class Course extends Model
         return $this->lessons()->sum('time');
     }
 
-    public function scopeSearch($query, $data)
-    {
-    if (isset($data['keyword'])) {
+    public function scopeSearch($query, $data) {
+
+        if (isset($data['keyword'])) {
             $query->where('name', 'LIKE', "%" . $data['keyword'] . "%")->orWhere('description', 'LIKE', "%" . $data['keyword'] . "%");
-    }
+        }
 
-    if (isset($data['created_time']) && $data['created_time'] == config('course.sort_by_newest')) {
-        $query->orderBy('created_at', config('course.sort_hight_to_low'));
-    }
+        if (isset($data['created_time']) && $data['created_time'] == config('course.sort_by_newest')) {
+            $query->orderBy('created_at', config('course.sort_hight_to_low'));
+        }
 
-    if (isset($data['teachers']) && !empty($data['teachers'])) {
-        $query->whereHas('teachers', function ($query) use ($data) {
-            $query->whereIn('user_id', $data['teachers']);
-        });
-    }
+        if (isset($data['teachers']) && !empty($data['teachers'])) {
+            $query->whereHas('teacherCourse', function ($query) use ($data) {
+                $query->whereIn('user_id', $data['teachers']);
+            });
+        }
 
-    if (isset($data['learner']) && !empty($data['learner'])) {
-        $query->withCount('users')->orderBy('users_count', $data['learner']);
-    }
+        if (isset($data['learner']) && !empty($data['learner'])) {
+            $query->withCount('users')->orderBy('users_count', $data['learner']);
+        }
 
-    if (isset($data['time']) && !empty($data['time'])) {
-        $query->withSum('lessons', 'time')->orderBy('lessons_sum_time', $data['time']);
-    }
+        if (isset($data['time']) && !empty($data['time'])) {
+            $query->withSum('lessons', 'time')->orderBy('lessons_sum_time', $data['time']);
+        }
 
-    if (isset($data['lesson']) && !empty($data['lesson'])) {
-        $query->withCount('lessons')->orderBy('lessons_count', $data['lesson']);
-    }
+        if (isset($data['lesson']) && !empty($data['lesson'])) {
+            $query->withCount('lessons')->orderBy('lessons_count', $data['lesson']);
+        }
 
-    if (isset($data['tags']) && !empty($data['tags'])) {
-        $query->whereHas('tags', function ($query) use ($data) {
-            $query->whereIn('tag_id', $data['tags']);
-        });
-    }
+        if (isset($data['tags']) && !empty($data['tags'])) {
+            $query->whereHas('tags', function ($query) use ($data) {
+                $query->whereIn('tag_id', $data['tags']);
+            });
+        }
 
-    if (isset($data['review']) && !empty($data['rate'])) {
-        $query->withCount('reviews')->orderBy('reviews_count', $data['review']);
-    }
+        if (isset($data['review']) && !empty($data['rate'])) {
+            $query->withCount('reviews')->orderBy('reviews_count', $data['review']);
+        }
 
-    return $query;
-    }
+        return $query;
+        }
 }
