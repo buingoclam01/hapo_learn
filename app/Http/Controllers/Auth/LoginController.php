@@ -50,7 +50,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             return redirect('/');
         } else {
-            return redirect('/login')->with('error', __('message.login_fail'));
+            return redirect('/login')->with('error', __('message.login_error'));
         }
     }
 }
