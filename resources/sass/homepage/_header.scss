@@ -48,7 +48,14 @@
   .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 0.6);
     font-weight: 800;
+  }
+  .active {
+    background-color: $color-bg;
+    border-radius: 17px;
 
+    .nav-link {
+      color: white !important;
+    }
   }
 }
 

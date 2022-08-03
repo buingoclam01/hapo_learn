@@ -105,7 +105,7 @@
                                     </div>
                                 </div>
                                 <div class=" row justify-content-between">
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <div class="course-learners">
                                         {{ __('course.learners') }}
                                         </div>
@@ -113,7 +113,7 @@
                                             {{ $course->learners }}
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <div class="course-learners">
                                         {{ __('course.lessons') }}
                                         </div>
@@ -121,7 +121,7 @@
                                             {{ $course->lessons }}
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <div class="course-learners">
                                         {{ __('course.times') }}
                                         </div>

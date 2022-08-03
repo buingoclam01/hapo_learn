@@ -1,286 +1,287 @@
 .course-container {
-    margin-top: 108px;
-    background-color: $bg-white;
-    font-family: $font-family;
-    min-height: 60vh;
-    padding-bottom: 40px;
+  margin-top: 108px;
+  background-color: $bg-white;
+  font-family: $font-family;
+  min-height: 60vh;
+  padding-bottom: 40px;
 
-    .course-content {
-      padding-top: 65px;
+  .course-content {
+    padding-top: 65px;
 
-      .search-form {
-        display: flex;
-      }
-
-      .mr-15 {
-        margin-right: 15px;
-      }
-
-      .filter-btn {
-        background-color: white;
-        border: 1px solid $bg-xam;
-        font-weight: 700;
-        padding: 4px 16px;
-        border-radius: 4px;
-        color: #505353;
-        cursor: pointer;
-      }
-
-      .search-box {
-        position: relative;
-      }
-
-      .search-box input {
-        width: 355px;
-        padding: 4px 8px;
-        border-radius: 4px;
-        border: 1px solid $bg-xam;
-      }
-
-      .search-box i {
-        position: absolute;
-        top: 5px;
-        right: 6px;
-        font-size: 18px;
-        padding: 4px;
-        color: #505353;
-      }
-
-      .search-btn {
-        color: white;
-        background-color: $yello;
-        font-weight: 700;
-        border: 0;
-        border-radius: 4px;
-        font-size: 15px;
-        padding: 6px 10px;
-      }
-    }
-
-    .filter-content {
-      background-color: white;
-      border: 1px solid $bg-xam;
-      border-radius: 4px;
-      margin-top: 20px;
-      display: none;
-      padding: 4px 20px;
-      min-height: 100px;
-      display: none;
-
-      span {
-        font-size: 16px;
-        color: #505353;
-        font-weight: 700;
-      }
-
-      & > span {
-        min-width: 70px;
-        margin-top: 8px;
-      }
-
-      & > div {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-
-      input[type="radio"] {
-        display: none;
-      }
-
-      label {
-        width: 100px;
-        color: $green;
-        font-weight: 900;
-        border-radius: 2px;
-        margin-left: 10px;
-        margin-bottom: 0;
-        padding: 5px 14px;
-        text-align: center;
-        background-color: $bg;
-        cursor: pointer;
-      }
-
-      input[type="radio"]:checked + label {
-        background-color: $yello;
-        color: white;
-      }
-
-      .filter-option-container {
-        border-radius: 2px;
-        padding: 4px;
-        width: 180px;
-        height: 32px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 14px;
-        margin-left: 10px;
-        padding-left: 10px;
-        position: relative;
-        cursor: default;
-      }
-
-      .filter-option-container select {
-        color: $grey;
-      }
-
-      .filter-border {
-        border: 0;
-        padding: 0;
-      }
-
-      .filter-teacher-title {
-        position: absolute;
-        left: 8px;
-      }
-
-      .filter-teacher-icon {
-        position: absolute;
-        right: 8px;
-      }
-
-      .select2-container--default .select2-selection--multiple {
-        background-color: transparent;
-        z-index: 2;
-        max-height: 36px;
-        overflow-y: auto;
-        border: 1px solid $bg-xam;
-      }
-
-      .select2-container--default .select2-selection--multiple:focus-within {
-        background-color: white;
-      }
-
-      .select2.select2-container.select2-container--default {
-        width: 100% !important;
-      }
-
-      .select2-selection.select2-selection--single {
-        height: 32px;
-        border-color: $bg-xam;
-      }
-
-      .filter-option-container:hover .filter-option {
-        display: block;
-      }
-
-      .filter-option {
-        list-style: none;
-        margin: 0;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        border: 1px solid $bg-xam;
-        width: 100%;
-        padding: 0;
-        background-color: white;
-        display: none;
-        border-radius: 2px;
-        z-index: 1;
-      }
-
-      .filter-option li {
-        width: 100%;
-      }
-
-    .filter-option a {
-        color: $grey;
-        display: block;
-        margin: 0 10px;
-        border-bottom: 1px solid $bg-xam;
-        font-size: 16px;
-        font-weight: 400;
-        text-decoration: none;
-        padding: 4px 0;
-      }
-
-    .filter-option li:last-child a {
-        border: 0;
-      }
-    }
-    .filter-show {
+    .search-form {
       display: flex;
     }
-}
-  .item-title,
-  .item-description,
-  .course-learners,
-  .course-number {
-    font-family: $font-family;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 22px;
-    color: $yello;
-  }
 
-  .list-item {
-    margin-top: 40px;
+    .mr-15 {
+      margin-right: 15px;
+    }
 
-    .row {
-      justify-content: center;
+    .filter-btn {
+      background-color: white;
+      border: 1px solid $bg-xam;
+      font-weight: 700;
+      padding: 4px 16px;
+      border-radius: 4px;
+      color: #505353;
+      cursor: pointer;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 355px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid $bg-xam;
+    }
+
+    .search-box i {
+      position: absolute;
+      top: 5px;
+      right: 6px;
+      font-size: 18px;
+      padding: 4px;
+      color: #505353;
+    }
+
+    .search-btn {
+      color: white;
+      background-color: $yello;
+      font-weight: 700;
+      border: 0;
+      border-radius: 4px;
+      font-size: 15px;
+      padding: 6px 10px;
     }
   }
 
-  .box-item {
-    border: 1px solid $bg;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-  }
+  .filter-content {
+    background-color: white;
+    border: 1px solid $bg-xam;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: none;
+    padding: 4px 20px;
+    min-height: 100px;
+    display: none;
 
-  .course-item {
-    border-bottom: 2px solid $bg;
-  }
+    span {
+      font-size: 16px;
+      color: #505353;
+      font-weight: 700;
+    }
 
-  .img-item {
-    width: 80px;
-    height: 80px;
-    border-radius: 48px;
-    margin: 20px 0 0 20px;
-  }
+    & > span {
+      min-width: 70px;
+      margin-top: 8px;
+    }
 
-  .item-content {
-    height: 254px;
-    position: relative;
-  }
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-  .item-title {
-    font-size: 22px;
-    color: $grey;
-    margin-bottom: 10px;
-    margin-top: 25px;
-  }
+    input[type="radio"] {
+      display: none;
+    }
 
-  .item-description {
-    font-size: 18px;
-    color: $grey;
-    font-weight: 400;
-  }
+    label {
+      width: 100px;
+      color: $green;
+      font-weight: 900;
+      border-radius: 2px;
+      margin-left: 10px;
+      margin-bottom: 0;
+      padding: 5px 14px;
+      text-align: center;
+      background-color: $bg;
+      cursor: pointer;
+    }
 
-  .btn-more {
-    position: absolute;
-    bottom: 40px;
-    right: -10px;
-    background-color: $yello;
-    color: white;
-    width: 106px;
-    height: 42px;
-    border-radius: 22px;
-    border: 0;
-    font-weight: 700;
-  }
+    input[type="radio"]:checked + label {
+      background-color: $yello;
+      color: white;
+    }
 
-  .course-learners {
-    font-size: 25px;
-    color: $grey;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
+    .filter-option-container {
+      border-radius: 2px;
+      padding: 4px;
+      width: 180px;
+      height: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      margin-left: 10px;
+      padding-left: 10px;
+      position: relative;
+      cursor: default;
+    }
 
-  .course-number {
-    font-size: 30px;
-    margin-bottom: 19px;
-    color: $yello;
-    text-align: center;
-    font-family: $font-family;
+    .filter-option-container select {
+      color: $grey;
+    }
+
+    .filter-border {
+      border: 0;
+      padding: 0;
+    }
+
+    .filter-teacher-title {
+      position: absolute;
+      left: 8px;
+    }
+
+    .filter-teacher-icon {
+      position: absolute;
+      right: 8px;
+    }
+
+    .select2-container--default .select2-selection--multiple {
+      background-color: transparent;
+      z-index: 2;
+      max-height: 36px;
+      overflow-y: auto;
+      border: 1px solid $bg-xam;
+    }
+
+    .select2-container--default .select2-selection--multiple:focus-within {
+      background-color: white;
+    }
+
+    .select2.select2-container.select2-container--default {
+      width: 100% !important;
+    }
+
+    .select2-selection.select2-selection--single {
+      height: 32px;
+      border-color: $bg-xam;
+    }
+
+    .filter-option-container:hover .filter-option {
+      display: block;
+    }
+
+    .filter-option {
+      list-style: none;
+      margin: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      border: 1px solid $bg-xam;
+      width: 100%;
+      padding: 0;
+      background-color: white;
+      display: none;
+      border-radius: 2px;
+      z-index: 1;
+    }
+
+    .filter-option li {
+      width: 100%;
+    }
+
+    .filter-option a {
+      color: $grey;
+      display: block;
+      margin: 0 10px;
+      border-bottom: 1px solid $bg-xam;
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: none;
+      padding: 4px 0;
+    }
+
+    .filter-option li:last-child a {
+      border: 0;
+    }
   }
+  .filter-show {
+    display: flex;
+  }
+}
+.item-title,
+.item-description,
+.course-learners,
+.course-number {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  color: $yello;
+}
+
+.list-item {
+  margin-top: 40px;
+
+  .row {
+    justify-content: center;
+  }
+}
+
+.box-item {
+  border: 1px solid $bg;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.course-item {
+  border-bottom: 2px solid $bg;
+}
+
+.img-item {
+  width: 80px;
+  height: 80px;
+  border-radius: 48px;
+  margin: 20px 0 0 20px;
+}
+
+.item-content {
+  height: 254px;
+  position: relative;
+}
+
+.item-title {
+  font-size: 22px;
+  color: $grey;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.item-description {
+  font-size: 18px;
+  color: $grey;
+  font-weight: 400;
+}
+
+.btn-more {
+  position: absolute;
+  bottom: 40px;
+  right: -10px;
+  background-color: $yello;
+  color: white;
+  width: 106px;
+  height: 42px;
+  border-radius: 22px;
+  border: 0;
+  font-weight: 700;
+}
+
+.course-learners {
+  text-align: center;
+  font-size: 23px;
+  color: $grey;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.course-number {
+  font-size: 30px;
+  margin-bottom: 19px;
+  color: $yello;
+  text-align: center;
+  font-family: $font-family;
+}
