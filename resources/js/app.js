@@ -49,5 +49,3 @@ overlay.addEventListener('click', ()=> {
     overlay.classList.toggle("overlay-close");
     overlay.classList.toggle("overlay-open");
 });
-
-$('select').select2();
