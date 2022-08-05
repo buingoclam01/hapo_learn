@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Tag;
+use App\Models\CourseTag;
 
-class TagsTabSeeder extends Seeder
+class CourseTagTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class TagsTabSeeder extends Seeder
      */
     public function run()
     {
-        Tag::factory()->count(5)->create();
+        CourseTag::factory()->count(100)->create();
     }
 }

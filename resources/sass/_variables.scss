@@ -11,6 +11,7 @@ body {
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+$font-family: 'UTM BryantLG';
 
 // Colors
 
@@ -28,6 +29,11 @@ $cyan: #6cb2eb;
 $white:#ffff;
 $grey:#505353;
 $xam:#505353;
+$bg:#F1F1F1;
+$bg-white: #f2f2f2;
+$bg-xam:#c4c4c4;
+$color-bg:#B2D235;
+$main-bg: #B2D235;
 main {
   min-height: 54vh;
 }

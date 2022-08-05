@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Review;
+use App\Models\Program;
 
-class ReviewTableSeeder extends Seeder
+class ProgramsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class ReviewTableSeeder extends Seeder
      */
     public function run()
     {
-        Review::factory()->count(100)->create();
+        Program::factory()->count(300)->create();
     }
 }

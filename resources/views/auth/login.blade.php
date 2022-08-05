@@ -9,9 +9,9 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-                        @if (session('status'))
+                        @if (session('error'))
                             <div class="alert alert-danger" role="alert">
-                                {{ session('status') }}
+                                {{ session('error') }}
                             </div>
                         @endif
                         <div class="form-group">
