@@ -6,7 +6,7 @@ return [
     'sort_hight_to_low' => 'desc',
     'sort_low_to_hight' => 'asc',
     'sort_ascending' => 'asc',
-    'paginate' => 10,
     'sort_by_newest' => 'newest',
     'sum' => 'time',
+    'paginate' => 20,
 ];
