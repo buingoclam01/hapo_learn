@@ -115,9 +115,7 @@
                             </div>
                         @endforeach
                         <div class="btn-view-all">
-                            <a href="{{ route('courses.index') }}" class="btn btn-hapo">{{
-                            __('course_detail.view_all_course')
-                            }}</a>
+                            <a href="{{ route('courses.index') }}" class="btn btn-hapo">{{ __('course_detail.view_all_course') }}</a>
                         </div>
                     </div>
                 </div>

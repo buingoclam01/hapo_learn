@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Request\ReviewRequest;
-use App\Http\Request\UpdateReviewRequest;
+use App\Http\Requests\ReviewRequest;
+use App\Http\Requests\UpdateReviewRequest;
 use Illuminate\Http\Request;
 use App\Models\Review;
 

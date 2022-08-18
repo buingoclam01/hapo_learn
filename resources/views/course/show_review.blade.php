@@ -164,7 +164,7 @@
                         <div class="rep">
                             <div class="border-bonus-rep"></div>
                             <div class="rep-comment">
-                                <div class="image"><img src="{{ $reply->user->image }}" alt=""></div>
+                                <div class="image"><img src="{{ $reply->user->avatar }}" alt=""></div>
                                 <div class="name">{{ $reply->user->name }}</div>
                                 <div class="time">
                                     {{ $reply->created_time }}
