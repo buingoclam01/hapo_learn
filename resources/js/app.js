@@ -7,9 +7,12 @@
 require('./bootstrap');
 import 'slick-carousel/slick/slick';
 import 'select2';
+require("./jquery.rateyo.min.js");
 require('./slickk');
 require('./select2');
 require('./filter');
+require('./rateyo');
+require('./review');
 window.Vue = require('vue').default;
 
 /**

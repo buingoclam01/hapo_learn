@@ -29,7 +29,7 @@ class Course extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'user_course');
+        return $this->belongsToMany(User::class, 'user_course')->withTimestamps();
     }
 
     public function teacherCourse()
@@ -40,6 +40,11 @@ class Course extends Model
     public function tags()
     {
          return $this ->belongsToMany(Tag::class, 'course_tag');
+    }
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
     }
 
 
@@ -66,6 +71,48 @@ class Course extends Model
     public function getTimesAttribute()
     {
         return $this->lessons()->sum('time');
+    }
+
+    public function getCountStar5Attribute()
+    {
+        return $this->reviews()->where('rate', 5)->count();
+    }
+
+    public function getCountStar4Attribute()
+    {
+        return $this->reviews()->where('rate', 4)->count();
+    }
+
+    public function getCountStar3Attribute()
+    {
+        return $this->reviews()->where('rate', 3)->count();
+    }
+
+    public function getCountStar2Attribute()
+    {
+        return $this->reviews()->where('rate', 2)->count();
+    }
+
+    public function getCountStar1Attribute()
+    {
+        return $this->reviews()->where('rate', 1)->count();
+    }
+
+    public function getAverageStarAttribute()
+    {
+        return round(($this->reviews()->avg('rate')), 1);
+    }
+
+    public function isJoined()
+    {
+        return $this->users()->where('user_id', auth()->id());
+    }
+
+    public function isFinished()
+    {
+        return $this->users()->whereExists(function ($query) {
+            $query->where('user_id', auth()->id());
+        })->where('user_course.deleted_at', '<>', null);
     }
 
     public function scopeSearch($query, $data)
