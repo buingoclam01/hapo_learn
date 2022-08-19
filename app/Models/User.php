@@ -60,8 +60,4 @@ class User extends Authenticatable
         return $query->where('role', config('roles.teacher'));
     }
 
-    public function getBirthdateFormatAttribute($value)
-    {
-        return Carbon::parse($this->date_of_birth)->format('d/m/Y');
-    }
 }
