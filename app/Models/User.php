@@ -27,6 +27,13 @@ class User extends Authenticatable
         'about',
         'role',
     ];
+
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+    
     public function reviews()
     {
         return $this->hasMany(Review::class);

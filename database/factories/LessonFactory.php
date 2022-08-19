@@ -17,7 +17,7 @@ class LessonFactory extends Factory
     {
         return [
             'course_id' => $this->faker->randomElement(Course::pluck('id')),
-            'title' => $this->faker->text(200),
+            'title' => $this->faker->name(),
             'time' => $this->faker->dateTime()->format('H:i:s'),
             'description' => $this->faker->text(200),
         ];

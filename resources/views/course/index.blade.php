@@ -98,9 +98,11 @@
                                             {{ $course->description }}
                                         </div>
                                         <div>
+                                        <form method="GET" action="{{ route('courses.show', $course->id) }}">
                                             <button class="btn-more">
-                                            {{ __('course.more') }}
+                                           {{ __('course.more') }}
                                             </button>
+                                        </form>
                                         </div>
                                     </div>
                                 </div>
