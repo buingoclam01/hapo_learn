@@ -68,7 +68,7 @@
                                     </span>
                                 @enderror
                                 <label for="dateOfBirth">{{ __('profile.date_of_birth') }}:</label>
-                                <input id="dateOfBirth" class="@error('date_of_birth') is-invalid @enderror" type="date" placeholder="dd/mm/yyyy" name="date_of_birth">
+                                <input id="dateOfBirth" class="@error('date_of_birth') is-invalid @enderror" type="date" placeholder="{{ __('profile.dd/mm/yyyy') }} name="date_of_birth">
                                 @error('date_of_birth')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

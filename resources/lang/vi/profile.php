@@ -16,4 +16,5 @@ return [
     'about' => 'Mô tả',
     'about_you' => 'Mô tả về bạn',
     'update' => 'Cập nhật',
+    'dd/mm/yyyy' => 'dd/mm/yyyy',
 ];

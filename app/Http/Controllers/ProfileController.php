@@ -4,20 +4,31 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Http\Request\ProfileRequest;
-use App\Services\UserService;
+use App\Http\Requests\ProfileRequest;
 
 class ProfileController extends Controller
 {
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
     public function index()
     {
         $user = User::find(auth()->id());
-        $courses = $user->courses;
-
-        return view('profiles.index', compact('user', 'courses'));
+        $courses = $user->courses()->get();
+        return view('profile', compact('user', 'courses'));
     }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
 
     public function update(ProfileRequest $request, $id)
     {
@@ -26,16 +37,5 @@ class ProfileController extends Controller
         }
         User::find($id)->update(array_filter($request->all()));
         return redirect()->back();
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }
