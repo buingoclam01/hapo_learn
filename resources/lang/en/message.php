@@ -16,4 +16,5 @@ return [
     'sign_up' => 'Register',
     'register_success' => 'Sign Up Success',
     'login_error' => 'Username or password is incorrect!',
+    'update_successful' => 'Update information successfully',
 ];

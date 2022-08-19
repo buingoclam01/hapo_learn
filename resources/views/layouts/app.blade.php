@@ -15,17 +15,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 </head>
 <body>
     @include('layouts.header')
-    
+
     <main>
         @yield('content')
     </main>
-    
+
     @include('layouts.footer')
 
     <script src="{{ asset('js/app.js') }}"></script>
-    
+
 </body>
 </html>

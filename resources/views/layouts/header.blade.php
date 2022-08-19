@@ -21,7 +21,7 @@
                 </li>
 
                 <li class="nav-item {{ (Request::route()->getName() == 'profile') ? 'active' : '' }}">
-                    <a class="nav-link" href="#">PROFILE</a>
+                    <a class="nav-link" href="{{ route('profiles.index') }}">PROFILE</a>
                 </li>
                 <li class="nav-item {{ ((Request::route()->getName() == 'login') || (Request::route()->getName() == 'register')) ? 'active' : '' }}">
                 @if(Auth::check())
