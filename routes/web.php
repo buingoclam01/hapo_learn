@@ -7,6 +7,7 @@ use App\Http\Controllers\ReplyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -27,4 +28,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('reviews', ReviewController::class)->only(['destroy', 'update']);
     Route::resource('replys', ReplyController::class)->only(['store', 'destroy', 'update']);
     Route::resource('user-course', UserCourseController::class)->only(['store', 'destroy', 'update']);
+    Route::resource('profiles', ProfileController::class)->only('index', 'update');
 });

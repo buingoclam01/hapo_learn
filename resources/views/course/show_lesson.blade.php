@@ -10,7 +10,6 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
-
                     <div class="col-4">
                         <button class="btn-search" type="submit" name="submit" value="Search">{{
                             __('course.search')

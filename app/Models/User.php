@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -33,7 +34,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Reply::class);
     }
-    
+
     public function reviews()
     {
         return $this->hasMany(Review::class);
@@ -41,7 +42,7 @@ class User extends Authenticatable
 
     public function courses()
     {
-        return $this->belongsToMany(Course::class, 'course_id');
+        return $this->belongsToMany(Course::class, 'user_course');
     }
 
     public function teacherCourses()

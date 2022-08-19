@@ -13,4 +13,6 @@ return [
     'same' => ':attribute không trùng nhau',
     'required_review' => 'Vui lòng nhập nội dung',
     'required_star' => 'Vui lòng chọn sao',
+    'regex' => ':attribute không hợp lệ',
+    'image' => ':attribute không hợp lệ'
 ];
