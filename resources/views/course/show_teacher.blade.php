@@ -1,4 +1,4 @@
-<div id="Teacher" class="tab-pane fade">
+<div class="tab-pane fade course-detail-teachers" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
     <div class="teacher">
         <div class="main-teacher">Main Teachers</div>
         @foreach ($teachers as $teacher )

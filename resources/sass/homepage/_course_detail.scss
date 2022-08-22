@@ -1,7 +1,7 @@
 .detail-course-overview {
     background-color: #f2f2f2;
     height: auto;
-    margin-top: 209px;
+    margin-top: 109px;
   }
   .breadcrumb-item + .breadcrumb-item::before {
     float: left;
@@ -583,7 +583,7 @@
   .review-vote {
     display: flex;
     justify-content: space-between;
-    width: 247px;
+    width: 380px;
 
     .vote {
       font-family: $font-family;
@@ -600,7 +600,7 @@
       font-size: 25px;
       line-height: 27px;
       color: #747474;
-      margin-left: 50px;
+      margin-left: -15px;
     }
 
     .click-star {

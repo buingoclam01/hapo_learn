@@ -7,28 +7,32 @@
                         <div class="footer-logo " href="#">
                             <p class="img-foter"><img src="{{ asset('images/hapo_white.png') }}" alt="HapoLearn Logo"></p>
                         </div>
-                        <p class="slogan-company"> Interactive lessons, "on-the-go" practice, peer support </p>
+                        <p class="slogan-company"> {{ __('home.interactive_lessons')
+                            }}, "on-the-go" {{ __('home.practice')
+                            }}, {{ __('home.peer_support') }} </p>
                     </div>
-                    <div class="col-md-1 col-lg-1 col-xl-1 mx-auto">
+                    <div class="col-md-1 col-lg-1 col-xl-1 mx-auto p-0">
                         <p>
-                            <a href="#" class="text-reset">Home</a>
+                            <a href="{{ route('home') }}" class="text-reset">{{__('home.home')}}</a>
                         </p>
                         <p>
-                            <a href="#" class="text-reset">List course</a>
+                            <a href="#" class="text-reset">{{__('home.list_course') }}</a>
                         </p>
                         <p>
-                            <a href="#" class="text-reset">List lesson</a>
+                            <a href="#" class="text-reset">{{__('home.list_course') }}</a>
                         </p>
                     </div>
                     <div class="col-md-1 col-lg-1 col-xl-1 mx-auto p-0">
                         <p>
-                            <a href="#" class="text-reset">Lesson detail</a>
+                            <a href="#" class="text-reset">{{__('home.lesson_detail') }}</a>
                         </p>
                         <p>
-                            <a href="#" class="text-reset">Login/Register</a>
+                        <a class="text-reset" href="{{ route('login') }}"A>
+                        {{__('home.register')}}
+                        </a>
                         </p>
                         <p>
-                            <a href="#" class="text-reset">Profile</a>
+                        <a  href="{{ route('profiles.index') }}" class="text-reset">{{__('home.profile')}} </a>
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 ">
@@ -50,7 +54,7 @@
                             </p>
                         </div>
                         <div class="list-address">
-                            
+
                         </div>
                     </div>
                 </div>

@@ -5,9 +5,9 @@
             <div class="url-title">
                 <nav aria-label="breadcrumb row">
                     <ol class="breadcrumb url-menu">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('courses.index') }}">All courses</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Course detail</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{__('home.home')}}</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('courses.index') }}"> {{__('home.all_courses') }} </a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{__('home.course_detail') }}</li>
                     </ol>
                 </nav>
             </div>
@@ -19,17 +19,17 @@
                 <section class='alert alert-danger '>{{session('error')}}</section>@endif
             <div class="row">
                 <div class="col-8 content-main">
-                    <div class="image-course"><img src="{{ $course->image }}" alt=""></div>
+                    <div class="image-course"><img src='https://source.unsplash.com/random' alt=""></div>
                     <div class="course-infor">
                         <ul class="nav menu-course" id="myTab">
                             <li class="nav-item">
-                                <a class="active" data-toggle="tab" href="#Lessons">{{ __('course_detail.lesson') }}</a>
+                            <a class="nav-link @if(!session('status')) active @endif" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="@if(!session('status')) true @else false @endif">{{ __('course_detail.lessons') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a data-toggle="tab" href="#Teacher">{{ __('course_detail.teacher') }}</a>
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">{{ __('course_detail.teachers') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a data-toggle="tab" href="#Reviews">{{ __('course_detail.reviews') }}</a>
+                            <a class="nav-link @if(session('status')) {{ session('status') }} @endif" id="pills-contact-tab" data-toggle="pill" data-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="@if(session('status')) true @else false @endif">{{ __('course_detail.reviews') }}</a>
                             </li>
                         </ul>
 

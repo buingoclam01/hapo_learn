@@ -6,18 +6,18 @@
     <img src="{{ asset('images/bannerhome.png') }}" alt="">
     </p>
         <div class="banner-title">
-            <p class="banner-title-content">Learn Anytime, Anywhere</p>
+            <p class="banner-title-content">{{ __('home.learn_anytime_anywhere') }} {{ __('home.at') }}</p>
             <p class="banner-title-content banner-title-content-b">
-                at HapoLearn<img src="{{ asset('images/banner.png') }}" alt="">!
+                 HapoLearn<img src="{{ asset('images/banner.png') }}" alt="">!
             </p>
         </div>
         <div class="banner-conlit">
             <p>
-                Interactive lessons, "on-the-go" <br>
-                practice, peer support.
+            {{ __('home.interactive_lessons') }}, "on-the-go" <br> {{ __('home.practice')
+                }}, {{ __('home.peer_support') }}.
             </p>
         </div>
-        <a href="#" class="button-1">Start Learning Now!</a>
+        <a href="{{ route('courses.index') }} " class="button-1">{{__('home.start_learning_now')}} </a>
     </div>
     <div class="banner-bottom">
     </div>
@@ -36,7 +36,7 @@
                 <p class="title">{{ $course->name }}</p>
                 <p class="content-text">{{ Str::limit($course->description, 60) }}</p>
                 <p class="btn-link">
-                   <a href="#" >Take This Course</a>
+                   <a href="{{ route('courses.index') }}" >{{__('home.take_this_course')}}</a>
                 </p>
              </div>
           </div>
@@ -44,7 +44,7 @@
        </div>
     </div>
     <div class="main-content">
-       <p class="big-tittle"> Other courses</p>
+       <p class="big-tittle"> {{__('home.other_courses')}}</p>
        <div class="line-border"></div>
        <div class="list-items">
        @foreach($otherCourses as $otherCourse)
@@ -56,47 +56,57 @@
                 <p class="title">{{ $otherCourse->name }}</p>
                 <p class="content-text">{{ Str::limit($otherCourse->description, 60) }}</p>
                 <p class="btn-link">
-                   <a href="#" >Take This Course</a>
+                   <a href="{{ route('courses.show', [$otherCourse->id]) }}" >{{__('home.take_this_course')}}</a>
                 </p>
              </div>
           </div>
           @endforeach
         </div>
        <div class="view-more-title">
-          <a href="">View All Our Courses <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="{{ route('courses.index') }}">{{__('home.view_all_our_course')}} <i class="fa-solid fa-arrow-right"></i></a>
        </div>
     </div>
  </div>
  <div class="banner-connect" style="background-image: url('{{ asset('images/backgroud.png')}}');">
     <div class="banner-connect-content">
        <p class="banner-connect-content-title">
-          Why HapoLearn?
+       {{ __('home.why') }} HapoLearn?
        </p>
        <p class="text-banner-connect">
-          <i class="fa-solid fa-circle-check"></i>  Interactive lessons, "on-the-go" practice, peer support.
+          <i class="fa-solid fa-circle-check"></i>  {{ __('home.interactive_lessons')
+                            }}, "on-the-go" {{ __('home.practice')
+                            }}, {{ __('home.peer_support') }}
        </p>
        <p class="text-banner-connect">
-          <i class="fa-solid fa-circle-check"></i>  Interactive lessons, "on-the-go" practice, peer support.
+          <i class="fa-solid fa-circle-check"></i>  {{ __('home.interactive_lessons')
+                            }}, "on-the-go" {{ __('home.practice')
+                            }}, {{ __('home.peer_support') }}
        </p>
        <p class="text-banner-connect">
-          <i class="fa-solid fa-circle-check"></i>  Interactive lessons, "on-the-go" practice, peer support.
+          <i class="fa-solid fa-circle-check"></i> {{ __('home.interactive_lessons')
+                            }}, "on-the-go" {{ __('home.practice')
+                            }}, {{ __('home.peer_support') }}
        </p>
        <p class="text-banner-connect">
-          <i class="fa-solid fa-circle-check"></i>  Interactive lessons, "on-the-go" practice, peer support.
+          <i class="fa-solid fa-circle-check"></i>  {{ __('home.interactive_lessons')
+                            }}, "on-the-go" {{ __('home.practice')
+                            }}, {{ __('home.peer_support') }}
        </p>
        <p class="text-banner-connect">
-          <i class="fa-solid fa-circle-check"></i>  Interactive lessons, "on-the-go" practice, peer support.
+          <i class="fa-solid fa-circle-check"></i>  {{ __('home.interactive_lessons')
+                            }}, "on-the-go" {{ __('home.practice')
+                            }}, {{ __('home.peer_support') }}
        </p>
     </div>
         <div class="banner-connect-img"> <img src="{{ asset('images/laptop.png')}}" alt="">  </div>
 </div>
 <div class="feed-back">
     <p class="big-tittle">
-       Feedback
+    {{__('home.feedback')}}
     </p>
     <div class="line-border"></div>
     <p class="feed-back-slogan">
-       What other students turned professionals have to say about us after learning with us and reaching their goals
+    {{__('home.feedback_title')}}
     </p>
     <div class="list-feedback">
     @foreach($reviews as $review)
@@ -128,23 +138,23 @@
 <div class="banner-startlearn" style="background-image: url('{{ asset('images/banner3.png')}}');">
     <div class="banner-startlearn-content">
        <p class="banner-startlearn-title">
-          Become a member of our growing community!
+       {{__('home.become_a_member')}}
        </p>
        <p class="banner-startlearn-link">
-          <a href="">Start Learning Now!</a>
+          <a href="{{ route('courses.index') }} ">{{__('home.start_learning_now')}}</a>
        </p>
     </div>
  </div>
  <div class="stactistic">
-    <p class="big-tittle"> Stactistic </p>
+    <p class="big-tittle"> {{__('home.statistic')}} </p>
     <div class="line-border"></div>
     <div class="list-statistic">
        <div class="list-item">
-          <div class="list-items-title">Courses </div>
+          <div class="list-items-title">{{__('home.courses')}} </div>
           <div class="list-item-number"> {{ $countCourses }} </div>
        </div>
        <div class="list-item">
-          <div class="list-items-title">Lessons
+          <div class="list-items-title">{{__('home.lessons')}}
           </div>
           <div class="list-item-number">
           {{ $countLessons }}
@@ -152,7 +162,7 @@
        </div>
        <div class="list-item">
           <div class="list-items-title">
-          Learners
+          {{__('home.learners')}}
           </div>
           <div class="list-item-number">
           {{ $learners }}

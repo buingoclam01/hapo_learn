@@ -1,4 +1,3 @@
-$(function() {
-    if ($("#reviewMessage").val() != undefined)
-        alert($("#reviewMessage").val());
+$('.btn-edit').click(function () {
+    $('.form-review-edit').toggleClass('show');
   });

@@ -36,6 +36,6 @@ class ProfileController extends Controller
             $request['image'] = UserService::handleUploadImage($request->file('upload_image'));
         }
         User::find($id)->update(array_filter($request->all()));
-        return redirect()->back();
+        return redirect()->back()->with('status', 'active');
     }
 }

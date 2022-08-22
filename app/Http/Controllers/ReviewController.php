@@ -25,10 +25,8 @@ class ReviewController extends Controller
     {
         $data = $request->all();
         $data['user_id'] = auth()->id();
-
         Review::create($data);
-
-        return redirect()->back();
+        return redirect()->back()->with('status', 'active');
     }
 
     /**
@@ -37,16 +35,11 @@ class ReviewController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
     public function update(UpdateReviewRequest $request, $id)
     {
-        $review = Review::find($id);
-        $review['message'] = $request['content_edit'];
-        $review['rate'] = $request['star_edit'];
-        $review->save();
-        return redirect()->back()->with('message', __('course_detail.edit_review_successful'));
+        Review::find($id)->update($request->all());
+        return redirect()->back()->with('status', 'active');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -56,7 +49,6 @@ class ReviewController extends Controller
     public function destroy($id)
     {
         Review::destroy($id);
-
-        return redirect()->back();
+        return redirect()->back()->with('status', 'active');
     }
 }
