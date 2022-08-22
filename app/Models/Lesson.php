@@ -31,6 +31,7 @@ class Lesson extends Model
     {
         return $this->belongsToMany(User::class);
     }
+
     public function scopeSearch($query, $data)
     {
         if (isset($data['keyword'])) {
@@ -38,4 +39,6 @@ class Lesson extends Model
         }
         return $query;
     }
+
+   
 }

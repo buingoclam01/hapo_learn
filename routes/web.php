@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LessonController;
+use App\Http\Controllers\UserProgramController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -23,10 +25,13 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::resource('courses', CourseController::class)->only(['index', 'show']);
+
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('reviews', ReviewController::class)->only(['store'])->middleware('canReview');
     Route::resource('reviews', ReviewController::class)->only(['destroy', 'update']);
     Route::resource('replys', ReplyController::class)->only(['store', 'destroy', 'update']);
     Route::resource('user-course', UserCourseController::class)->only(['store', 'destroy', 'update']);
     Route::resource('profiles', ProfileController::class)->only('index', 'update');
+    Route::resource('lessons', LessonController::class)->only('show');
 });
+

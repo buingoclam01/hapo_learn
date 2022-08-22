@@ -17,7 +17,7 @@ class TagFactory extends Factory
     {
         return [
             'course_id' => $this->faker->randomElement(Course::pluck('id')),
-            'name' => $this->faker->randomElement(['HTML', 'CSS', 'JS', 'PHP', 'Laravel', 'Ruby']),
+            'name' => $this->faker->unique()->randomElement(['HTML', 'CSS', 'JS', 'PHP', 'Laravel', 'Ruby', 'scss', 'git', 'nodejs', 'agular', 'nosql', 'C#', 'C++', '.Net','mongodb','w3school','WBS','ruby']),
         ];
     }
 }

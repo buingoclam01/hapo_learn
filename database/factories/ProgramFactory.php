@@ -16,8 +16,10 @@ class ProgramFactory extends Factory
     public function definition()
     {
         return [
-            'lesson_id' => $this->faker->randomElement(Lesson::pluck('id')),
             'name' => $this->faker->name(),
+            'file_type' => $this->faker->randomElement(['docx', 'mp4', 'pdf']),
+            'lesson_id' => $this->faker->randomElement(Lesson::pluck('id')),
+            'link' => $this->faker->url(),
         ];
     }
 }

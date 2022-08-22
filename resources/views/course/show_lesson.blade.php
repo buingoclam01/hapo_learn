@@ -36,13 +36,33 @@
                 @endif
             </form>
             @if ($course->isJoined->count() && !$course->isFinished->count())
-                <form action=" {{ route('user-course.destroy', [$course->id]) }} " method="POST">
-                    @csrf
-                    @method('delete')
-                    <div class="d-flex justify-content-center">
-                        <button class="btn btn-hapo btn-leave-course">{{ __('course_detail.end_course') }}</button>
+            <button class="btn btn-hapo btn-leave-course" data-toggle="modal" data-target="#exampleModalCenter">
+                {{ __('course_detail.end_course') }}
+            </button>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Thông Báo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Bạn có chắc chắn muốn kết thúc khóa học ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                            <form action=" {{ route('user-course.destroy', [$course->id]) }} " method="POST">
+                                @csrf
+                                @method('delete')
+                                <button class="btn btn-primary">Có</button>
+                            </form>
+                        </div>
                     </div>
-                </form>
+                </div>
+            </div>
             @elseif ($course->isFinished->count())
 
                 <form action=" {{ route('user-course.update', [$course->id]) }} " method="POST">
@@ -58,13 +78,20 @@
             <div class="lessons-list-detail">
                 <div class="name"><span>{{ (isset($data['page'])) ? ((($data['page'] - 1) * 5) + ($index + 1)) : ($index + 1) }}.</span> {{ $lesson->title }} </div>
                 @if ($course->isJoined->count() && !$course->isFinished->count())
+
+
                     <div class="learn">
-                        <button class="btn btn-hapo btn-learn">{{ __('course_detail.learn') }}</button>
+                    <form action="{{route('lessons.show', $lesson->id) }}" method="get">
+                         <button class="btn btn-hapo btn-learn">{{ __('course_detail.learn') }}</button>
+                    </form>
                     </div>
                 @else
-                    <div class="learn">
-                        <button class="btn btn-hapo btn-not-learn">{{ __('course_detail.learn') }}</button>
+
+                <div class="learn">
+
+                            <button class="btn btn-hapo btn-not-learn" type="submit"> {{ __('course_detail.learn') }}</button>
                     </div>
+
                 @endif
             </div>
         @endforeach
