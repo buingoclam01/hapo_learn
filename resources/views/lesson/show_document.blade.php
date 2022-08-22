@@ -1,8 +1,8 @@
 <div id="Documents" class="tab-pane fade">
     <div class="program">
-        <div class="title">Program</div>
+        <div class="title">{{__('course.program')}}</div>
         <div class="learn-process">
-            <label for="file" class="title">Learning progress:</label>
+            <label for="file" class="title">{{__('course.learning_progress')}}:</label>
             <progress id="file" value="{{ $lesson->progress }}" max="100"></progress> {{ $lesson->progress }}%
         </div>
         <div class="document-list">

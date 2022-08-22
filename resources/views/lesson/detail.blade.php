@@ -25,10 +25,11 @@
                 <div class="lesson-infor">
                     <ul class="nav menu-lesson" id="myTab">
                         <li class="nav-item">
-                            <a class="active" data-toggle="tab" href="#Descriptions">Descriptions</a>
+                            <a class="active" data-toggle="tab" href="#Descriptions">{{__('course.description')}}</a>
                         </li>
                         <li class="nav-item">
-                            <a data-toggle="tab" href="#Documents">Documents</a>
+                            <a data-toggle="tab" href="#Documents">{{__('course.document') }}</a>
+
                         </li>
                     </ul>
 

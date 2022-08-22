@@ -20,4 +20,8 @@ return [
     'learners' => 'Số người học',
     'more' => "Xem",
     'erorr' => 'Không tìm thấy kết quả nào',
+    'document' =>'Tài liệu',
+    'description' =>'Mô tả',
+    'program' => 'Chương trình',
+    'learning_progress' =>'Tiến độ học tập',
 ];
