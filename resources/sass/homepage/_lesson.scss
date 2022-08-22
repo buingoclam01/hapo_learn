@@ -1,0 +1,419 @@
+.detail-lesson-overview {
+    background-color: #f2f2f2;
+    height: auto;
+    margin-top: 109px;
+}
+.url-main {
+    background-color: #d1c2c2;
+    height: 50px;
+
+    .url-title {
+        width: 416px;
+        line-height: 50px;
+        margin-left: 90px;
+    }
+
+    .url-menu {
+        background-color: #d1c2c2;
+        padding: 0;
+    }
+}
+
+.detail-lesson-content {
+    padding-top: 50px;
+    margin: auto;
+    width: 1150px;
+}
+
+.content-main {
+    padding: 0;
+    .image-course {
+        img {
+            width: 100%;
+            height: 439px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.lesson-infor {
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+
+    .menu-lesson {
+        display: flex;
+        width: 350px;
+        justify-content: space-around;
+        padding: 13px 0px 0px 0px;
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+            color: #505353;
+        }
+    }
+
+    .border-bonus {
+        padding-top: 16px;
+        margin: auto;
+        width: 750px;
+        border-bottom: 1px solid #dadada;
+    }
+
+    .function-course {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+
+    .nav-item {
+        .active {
+            color: $main-bg;
+            background-color: white;
+            border-bottom: 2px solid $main-bg;
+            padding-bottom: 18px;
+        }
+    }
+}
+
+.function-course {
+    .search {
+        width: 390px;
+    }
+
+    .form-join {
+        .studying {
+            background-color: $main-bg;
+            width: 200px;
+            height: 42px;
+            border-radius: 22px;
+            text-align: center;
+            color: white;
+            line-height: 42px;
+            box-shadow: inset 0px 1.5px 2px #6f8710;
+        }
+    }
+
+    .btn-leave-course {
+        margin-top: 20px;
+        background-color: red;
+    }
+}
+
+.lessons-list {
+    margin: 30px 0;
+
+    .lessons-list-detail {
+        display: flex;
+        justify-content: space-between;
+        width: 680px;
+        border: 1px solid #e2e0e0;
+        margin-left: 25px;
+        padding: 10px 10px;
+        border-left: none;
+        border-right: none;
+
+        .btn-learn {
+            width: 80px;
+            height: 30px;
+            line-height: 0;
+            color: white;
+        }
+
+        .btn-not-learn {
+            background-color: $main-bg;
+            width: 80px;
+            height: 30px;
+            line-height: 0;
+            cursor: not-allowed;
+            opacity: 0.5;
+            color: white;
+        }
+    }
+}
+
+.btn-hapo {
+    &:hover {
+        color: white;
+    }
+}
+
+.lessons-list-detail {
+    .name {
+        span {
+            padding-right: 5px;
+        }
+        .icon {
+            margin-right: 10px;
+        }
+    }
+}
+
+.content-bonus {
+    padding-left: 30px;
+}
+
+.lesson-infor-title {
+    border: 1px solid #d1d1d1;
+    background-color: white;
+
+    .lesson-infor-title-item {
+        display: flex;
+        width: 320px;
+        justify-content: flex-start;
+        padding-top: 15px;
+        border-bottom: 1px solid #d1d1d1;
+
+        i {
+            width: 40px;
+            height: 37px;
+        }
+
+        .name {
+            min-width: 150px;
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 31px;
+            color: #505353;
+        }
+
+        .content,
+        .colon {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 31px;
+            color: #505353;
+            padding-left: 7px;
+        }
+    }
+}
+
+.course-related {
+    background: #b2d235;
+    height: 60px;
+    margin-top: 30px;
+
+    .course-related-title {
+        line-height: 60px;
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 25px;
+        color: #ffffff;
+        text-align: center;
+    }
+}
+
+.course-related-list {
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+
+    .btn-view-all {
+
+        text-align: center;
+        background-color: white;
+
+    }
+
+    .course-related-detail {
+        .name {
+            border-bottom: 1px solid #d1d1d1;
+        }
+    }
+}
+
+.btn-hapo{
+    width: 222px;
+    font-size: 20px;
+    height: 48px;
+    margin: 13px auto;
+    border-radius: 25px;
+    color: white;
+
+}
+.btn-end{
+    margin-left: 50px;
+}
+.course-related-detail {
+    .name {
+        padding: 20px 0;
+
+        a {
+            color: #505353;
+            text-decoration: none;
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        a:hover {
+            color: $main-bg;
+        }
+
+        span {
+            padding-right: 10px;
+        }
+    }
+}
+
+.information {
+    width: 750px;
+    margin: auto;
+
+    .title {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 25px;
+        color: #505353;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 18px;
+        text-align: justify;
+        color: #949292;
+    }
+}
+
+.information.des {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.tags {
+    display: flex;
+    justify-content: flex-start;
+    width: 425px;
+    .item {
+        background: #f2f2f2;
+        border: 1px solid #e4e4e4;
+        border-radius: 3px;
+        width: 65px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        margin: 0 5px;
+
+        p {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 15px;
+            color: #949292;
+        }
+    }
+
+    .title {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        color: #505353;
+        margin-right: 20px;
+    }
+}
+
+.program {
+    width: 750px;
+    margin: auto;
+
+    .title {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 31px;
+        color: #505353;
+        margin-top: 30px;
+    }
+
+    .learn-process {
+        text-align: end;
+
+        .title {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 20px;
+            color: #505353;
+        }
+
+        #file {
+            width: 200px;
+        }
+    }
+
+    .document-list {
+        margin: 30px 0;
+
+        .document-list-detail {
+            display: flex;
+            justify-content: space-between;
+            width: 750px;
+            border: 1px solid #f3f0f0;
+            margin: auto;
+            padding: 10px 10px;
+            border-left: none;
+            border-right: none;
+        }
+    }
+}
+
+.btn-hapo {
+    &:hover {
+        color: white;
+    }
+}
+
+.document-list-detail {
+    .name {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .title-file {
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: 18px;
+            color: #505353;
+            margin-left: 30px;
+        }
+
+        .name-file {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 14px;
+            color: #bdb9b9;
+            margin-left: 30px;
+            width: 40px;
+        }
+    }
+
+    .btn-preview.previewed {
+        background-color: #4d96ff;
+        line-height: 13px;
+    }
+
+    .icon-file {
+        color: $main-bg;
+        font-size: 25px;
+    }
+
+    .btn-preview {
+        width: 105px;
+        height: 30px;
+        line-height: 0;
+        color: white;
+    }
+}

@@ -16,7 +16,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="descriptions">{{ $teacher->about_me }}</div>
+                <div class="descriptions">{{ $teacher->about }}</div>
             </div>
         @endforeach
     </div>

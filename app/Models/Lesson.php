@@ -31,11 +31,16 @@ class Lesson extends Model
     {
         return $this->belongsToMany(User::class);
     }
+
     public function scopeSearch($query, $data)
     {
         if (isset($data['keyword'])) {
             return $query->where('title', 'LIKE', '%' . $data['keyword'] . '%');
         }
         return $query;
+    }
+    public function getTotalProgramsAttribute()
+    {
+        return $this->programs()->count();
     }
 }

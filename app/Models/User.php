@@ -59,4 +59,9 @@ class User extends Authenticatable
     {
         return $query->where('role', config('roles.teacher'));
     }
+    
+    public function getProgramUsersAttribute()
+    {
+        return $this->programs()->count();
+    }
 }

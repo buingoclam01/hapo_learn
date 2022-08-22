@@ -14,6 +14,6 @@ class ProgramsTableSeeder extends Seeder
      */
     public function run()
     {
-        Program::factory()->count(300)->create();
+        Program::factory()->count(30)->create();
     }
 }
