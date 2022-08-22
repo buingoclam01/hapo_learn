@@ -8,7 +8,7 @@ use App\Http\Requests\StoreUserLessonRequest;
 
 class UserLessonController extends Controller
 {
-    public function store(Request  $request)
+    public function store(StoreUserLessonRequest  $request)
     {
         $lesson = Lesson::find($request['lesson_id']);
         $lesson->users()->attach(auth()->id());

@@ -23,22 +23,15 @@ class Program extends Model
 
     public function users()
     {
-        return $this->belongsToMany(User::class)->withTimestamps();
+        return $this->belongsToMany(User::class, 'lesson_user', 'lesson_id', 'user_id');
+        return $this->belongsToMany(User::class, 'program_user', 'program_id', 'user_id')->withTimestamps();
     }
 
-    public function isLearned()
+    public function userJoinedProgram($programId)
     {
-        return $this->users()->where('user_id', auth()->id());
-    }
-
-    public function getTypeFileAttribute()
-    {
-        if ($this['file_type'] == 'docx') {
-            return 'word';
-        } elseif ($this['file_type'] == 'mp4') {
-            return 'video';
-        } elseif ($this['file_type'] == 'pdf') {
-            return 'pdf';
+        if (ProgramUser::where('program_id', $programId)->where('user_id', auth()->id())->count()) {
+            return true;
         }
+        return false;
     }
 }

@@ -26,6 +26,7 @@ return [
     'hours' => 'giờ',
     'tags' => 'Chủ đề',
     'price' => 'Giá',
+    'vote' => 'Bỏ phiếu',
     'status' => 'Trạng thái',
     'other_course' => 'Khóa học khác',
     'view_all_course' => 'Xem tất cả',

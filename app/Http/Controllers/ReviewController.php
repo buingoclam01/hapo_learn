@@ -25,10 +25,8 @@ class ReviewController extends Controller
     {
         $data = $request->all();
         $data['user_id'] = auth()->id();
-
         Review::create($data);
-
-        return redirect()->back();
+        return redirect()->back()->with('status', 'active');
     }
 
     /**
@@ -41,10 +39,7 @@ class ReviewController extends Controller
     public function update(UpdateReviewRequest $request, $id)
     {
         $review = Review::find($id);
-        $review['message'] = $request['content_edit'];
-        $review['rate'] = $request['star_edit'];
-        $review->save();
-        return redirect()->back()->with('message', __('course_detail.edit_review_successful'));
+        return redirect()->back()->with('status', 'active');
     }
 
     /**
@@ -56,7 +51,6 @@ class ReviewController extends Controller
     public function destroy($id)
     {
         Review::destroy($id);
-
-        return redirect()->back();
+        return redirect()->back()->with('status', 'active');
     }
 }

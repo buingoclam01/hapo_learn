@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-8 content-main">
                 <div class="image-course"><img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSypNQA6BnJpJfXmsQG1Mlj7VrkVYQW2YNdxnUa8OBv&s"
+                        src='https://source.unsplash.com/random'
                         alt=""></div>
                 <div class="lesson-infor">
                     <ul class="nav menu-lesson" id="myTab">

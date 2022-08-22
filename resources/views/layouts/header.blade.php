@@ -13,27 +13,27 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto w-100">
             <li class="nav-item {{ (Request::route()->getName() == 'home') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('home') }}" >HOME <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ route('home') }}" >{{__('home.home')}} <span class="sr-only">(current)</span></a>
                 </li>
 
                 <li class="nav-item {{ (Request::route()->getName() == 'courses.index') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('courses.index') }}">ALL COURSES</a>
+                    <a class="nav-link" href="{{ route('courses.index') }}">{{__('home.all_courses')}} </a>
                 </li>
 
                 <li class="nav-item {{ (Request::route()->getName() == 'profile') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('profiles.index') }}">PROFILE</a>
+                    <a class="nav-link" href="{{ route('profiles.index') }}">{{__('home.profile')}} </a>
                 </li>
                 <li class="nav-item {{ ((Request::route()->getName() == 'login') || (Request::route()->getName() == 'register')) ? 'active' : '' }}">
                 @if(Auth::check())
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
                             <button type="submit" class="nav-link logout-btn">
-                                LOGOUT
+                            {{__('home.logout')}}
                             </button>
                         </form>
                 @else
                         <a class="nav-link" href="{{ route('login') }}"A>
-                            LOGIN/REGISTER
+                        {{__('home.register')}}
                         </a>
                 @endif
                 </li>

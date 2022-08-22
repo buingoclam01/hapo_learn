@@ -11,8 +11,7 @@ class UserProgramController extends Controller
     public function store(Request $request)
     {
         $program = Program::find($request['program_id']);
-        $program->users()->attach(auth()->id());
-
+        $program->users()->attach(auth()->user()->id);
         return redirect($request['program_link']);
     }
 }

@@ -21,7 +21,7 @@ class UserCourseController extends Controller
         $course = Course::find($request['course_id']);
         $course->users()->attach(auth()->user()->id);
 
-        return redirect()->back();
+        return redirect()->back()->with('status', 'active');
     }
 
 
@@ -32,7 +32,7 @@ class UserCourseController extends Controller
             'user_id' => auth()->id()
         ])->restore();
 
-        return redirect()->back();
+        return redirect()->back()->with('status', 'active');
     }
 
     /**

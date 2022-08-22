@@ -1,4 +1,4 @@
-<div id="Reviews" class="tab-pane fade">
+<div class="tab-pane fade course-detail-reviews  @if(session('status')) show active @endif" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
     <div class="review">
         <div class="review-sum"> {{ $reviews->count() }} {{ __('course_detail.reviews') }}</div>
         <div class="star">
@@ -186,11 +186,9 @@
 
                                         <div class="edit">
                                             <span class="big-dot">●</span>
-                                            <button class="btn-comment btn-rep-edit" data-toggle="collapse"
-                                                    href="#collapseExample{{ $reply->id }}" role="button"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseExample{{ $reply->id }}">{{ __('course_detail.edit')
-                                    }}</button>
+                                            <button class="btn-comment btn-rep-edit" data-toggle="collapse" href="#collapseExample{{ $reply->id }}" role="button" aria-expanded="false"
+                                                    aria-controls="collapseExample{{ $reply->id }}">{{ __('course_detail.edit') }}
+                                                </button>
                                             <form class="form-rep-review-edit collapse"
                                                   id="collapseExample{{ $reply->id }}"
                                                   action="{{ route('replys.update',[$reply->id]) }}" method="POST">
@@ -201,8 +199,8 @@
                                                     name="rep_content_edit" id="rep_content_edit"></textarea>
                                                 @error('rep_content_edit')
                                                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                                <strong>{{ $message }}</strong>
+                                            </span>
                                                 @enderror
                                                 <div class="send">
                                                     <button class="btn btn-hapo btn-send" type="submit">{{ __('course_detail.send')
@@ -236,7 +234,8 @@
                 <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
             @endif
             <div class="review-vote">
-                <div class="vote">Vote</div>
+                <div class="vote">{{ __('course_detail.vote')
+                    }}</div>
                     <div id="rateYo"></div>
                 <div class="name-star">({{ __('course_detail.stars') }})</div>
             </div>

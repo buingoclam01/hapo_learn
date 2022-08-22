@@ -1,4 +1,4 @@
-<div id="Lessons" class="tab-pane fade show active">
+<div class="tab-pane fade @if(!session('status')) show active @endif" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
     <div class="function-course">
         <div class="search">
             <form action="{{ route('courses.show', [$course->id]) }}" method="GET">
@@ -6,9 +6,9 @@
                     <div class="col-8 box-search">
 
                         <input type="text" class="input-search" id="search" name="keyword" placeholder="Search...">
-                        <button type="submit" name="submit" value="Search">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
+                         <label for="keyword"> <i class="fa-search fa-solid fa-magnifying-glass"></i></label>
+
+
                     </div>
                     <div class="col-4">
                         <button class="btn-search" type="submit" name="submit" value="Search">{{
@@ -79,19 +79,13 @@
                 <div class="name"><span>{{ (isset($data['page'])) ? ((($data['page'] - 1) * 5) + ($index + 1)) : ($index + 1) }}.</span> {{ $lesson->title }} </div>
                 @if ($course->isJoined->count() && !$course->isFinished->count())
 
-
                     <div class="learn">
-                    <form action="{{route('lessons.show', $lesson->id) }}" method="get">
+                        <form action="{{route('lessons.show', $lesson->id) }}" method="get">
                          <button class="btn btn-hapo btn-learn">{{ __('course_detail.learn') }}</button>
                     </form>
                     </div>
                 @else
-
-                <div class="learn">
-
-                            <button class="btn btn-hapo btn-not-learn" type="submit"> {{ __('course_detail.learn') }}</button>
-                    </div>
-
+                    <div class="learn"> <button class="btn btn-hapo btn-not-learn" type="submit"> {{ __('course_detail.learn') }}</button></div>
                 @endif
             </div>
         @endforeach
