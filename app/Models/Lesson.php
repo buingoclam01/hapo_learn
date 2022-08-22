@@ -43,5 +43,4 @@ class Lesson extends Model
     {
         return $this->programs()->count();
     }
-
 }
