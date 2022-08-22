@@ -34,4 +34,3 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('profiles', ProfileController::class)->only('index', 'update');
     Route::resource('lessons', LessonController::class)->only('show');
 });
-

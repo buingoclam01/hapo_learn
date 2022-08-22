@@ -41,5 +41,4 @@ class Program extends Model
             return 'pdf';
         }
     }
-
 }
