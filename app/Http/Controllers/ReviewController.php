@@ -35,13 +35,11 @@ class ReviewController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
     public function update(UpdateReviewRequest $request, $id)
     {
-        $review = Review::find($id);
+        Review::find($id)->update($request->all());
         return redirect()->back()->with('status', 'active');
     }
-
     /**
      * Remove the specified resource from storage.
      *
